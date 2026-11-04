@@ -1,0 +1,1360 @@
+[
+  [
+    {
+      "v": {
+        "order": {
+          "id": 1,
+          "admission_id": 3,
+          "kind": "catheter",
+          "value": { "type": "urethral", "inserted_at": "2026-11-02T10:00:00.000Z", "measure_every_h": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "order": {
+          "id": 2,
+          "admission_id": 3,
+          "kind": "fluid_limit",
+          "value": { "ml": 1000, "scope": "total" },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "order": {
+          "id": 3,
+          "admission_id": 3,
+          "kind": "nil_by_mouth",
+          "value": { "until": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "order": {
+          "id": 4,
+          "admission_id": 3,
+          "kind": "acuity",
+          "value": { "level": "watch" },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "order": {
+          "id": 2,
+          "admission_id": 3,
+          "kind": "fluid_limit",
+          "value": { "ml": 1000, "scope": "total" },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        },
+        "created": false
+      }
+    },
+    {
+      "v": {
+        "order": {
+          "id": 5,
+          "admission_id": 3,
+          "kind": "fluid_limit",
+          "value": { "ml": 1500, "scope": "oral" },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "order": {
+          "id": 6,
+          "admission_id": 3,
+          "kind": "thickened_fluids",
+          "value": { "level": 2 },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "id": 3,
+        "admission_id": 3,
+        "kind": "nil_by_mouth",
+        "value": { "until": null },
+        "start_at": "2026-11-04T10:00:00.000Z",
+        "end_at": "2026-11-04T12:00:00.000Z",
+        "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+        "ended_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" }
+      }
+    },
+    { "v": { "$": "u" } },
+    {
+      "v": [
+        {
+          "id": 1,
+          "admission_id": 3,
+          "kind": "catheter",
+          "value": { "type": "urethral", "inserted_at": "2026-11-02T10:00:00.000Z", "measure_every_h": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 2,
+          "admission_id": 3,
+          "kind": "fluid_limit",
+          "value": { "ml": 1000, "scope": "total" },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": "2026-11-04T11:00:00.000Z",
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" }
+        },
+        {
+          "id": 3,
+          "admission_id": 3,
+          "kind": "nil_by_mouth",
+          "value": { "until": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": "2026-11-04T12:00:00.000Z",
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" }
+        },
+        {
+          "id": 4,
+          "admission_id": 3,
+          "kind": "acuity",
+          "value": { "level": "watch" },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 5,
+          "admission_id": 3,
+          "kind": "fluid_limit",
+          "value": { "ml": 1500, "scope": "oral" },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 6,
+          "admission_id": 3,
+          "kind": "thickened_fluids",
+          "value": { "level": 2 },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "ended_by": null
+        }
+      ]
+    },
+    {
+      "v": [
+        {
+          "id": 1,
+          "admission_id": 3,
+          "kind": "catheter",
+          "value": { "type": "urethral", "inserted_at": "2026-11-02T10:00:00.000Z", "measure_every_h": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 4,
+          "admission_id": 3,
+          "kind": "acuity",
+          "value": { "level": "watch" },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 5,
+          "admission_id": 3,
+          "kind": "fluid_limit",
+          "value": { "ml": 1500, "scope": "oral" },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 6,
+          "admission_id": 3,
+          "kind": "thickened_fluids",
+          "value": { "level": 2 },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "ended_by": null
+        }
+      ]
+    },
+    {
+      "v": [
+        {
+          "id": 6,
+          "admission_id": 3,
+          "kind": "thickened_fluids",
+          "value": { "level": 2 },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 5,
+          "admission_id": 3,
+          "kind": "fluid_limit",
+          "value": { "ml": 1500, "scope": "oral" },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 4,
+          "admission_id": 3,
+          "kind": "acuity",
+          "value": { "level": "watch" },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        }
+      ]
+    },
+    {
+      "v": [
+        {
+          "id": 6,
+          "admission_id": 3,
+          "kind": "thickened_fluids",
+          "value": { "level": 2 },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 5,
+          "admission_id": 3,
+          "kind": "fluid_limit",
+          "value": { "ml": 1500, "scope": "oral" },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 4,
+          "admission_id": 3,
+          "kind": "acuity",
+          "value": { "level": "watch" },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        },
+        {
+          "id": 3,
+          "admission_id": 3,
+          "kind": "nil_by_mouth",
+          "value": { "until": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": "2026-11-04T12:00:00.000Z",
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" }
+        },
+        {
+          "id": 2,
+          "admission_id": 3,
+          "kind": "fluid_limit",
+          "value": { "ml": 1000, "scope": "total" },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": "2026-11-04T11:00:00.000Z",
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" }
+        },
+        {
+          "id": 1,
+          "admission_id": 3,
+          "kind": "catheter",
+          "value": { "type": "urethral", "inserted_at": "2026-11-02T10:00:00.000Z", "measure_every_h": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+          "ended_by": null
+        }
+      ]
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            3,
+            [
+              {
+                "id": 1,
+                "admission_id": 3,
+                "kind": "catheter",
+                "value": { "type": "urethral", "inserted_at": "2026-11-02T10:00:00.000Z", "measure_every_h": null },
+                "start_at": "2026-11-04T10:00:00.000Z",
+                "end_at": null,
+                "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+                "ended_by": null
+              },
+              {
+                "id": 2,
+                "admission_id": 3,
+                "kind": "fluid_limit",
+                "value": { "ml": 1000, "scope": "total" },
+                "start_at": "2026-11-04T10:00:00.000Z",
+                "end_at": "2026-11-04T11:00:00.000Z",
+                "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+                "ended_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" }
+              },
+              {
+                "id": 3,
+                "admission_id": 3,
+                "kind": "nil_by_mouth",
+                "value": { "until": null },
+                "start_at": "2026-11-04T10:00:00.000Z",
+                "end_at": "2026-11-04T12:00:00.000Z",
+                "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+                "ended_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" }
+              },
+              {
+                "id": 4,
+                "admission_id": 3,
+                "kind": "acuity",
+                "value": { "level": "watch" },
+                "start_at": "2026-11-04T10:00:00.000Z",
+                "end_at": null,
+                "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+                "ended_by": null
+              },
+              {
+                "id": 5,
+                "admission_id": 3,
+                "kind": "fluid_limit",
+                "value": { "ml": 1500, "scope": "oral" },
+                "start_at": "2026-11-04T11:00:00.000Z",
+                "end_at": null,
+                "set_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+                "ended_by": null
+              },
+              {
+                "id": 6,
+                "admission_id": 3,
+                "kind": "thickened_fluids",
+                "value": { "level": 2 },
+                "start_at": "2026-11-04T11:00:00.000Z",
+                "end_at": null,
+                "set_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+                "ended_by": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            3,
+            [
+              {
+                "id": 1,
+                "admission_id": 3,
+                "kind": "catheter",
+                "value": { "type": "urethral", "inserted_at": "2026-11-02T10:00:00.000Z", "measure_every_h": null },
+                "start_at": "2026-11-04T10:00:00.000Z",
+                "end_at": null,
+                "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+                "ended_by": null
+              },
+              {
+                "id": 2,
+                "admission_id": 3,
+                "kind": "fluid_limit",
+                "value": { "ml": 1000, "scope": "total" },
+                "start_at": "2026-11-04T10:00:00.000Z",
+                "end_at": "2026-11-04T11:00:00.000Z",
+                "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+                "ended_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" }
+              },
+              {
+                "id": 3,
+                "admission_id": 3,
+                "kind": "nil_by_mouth",
+                "value": { "until": null },
+                "start_at": "2026-11-04T10:00:00.000Z",
+                "end_at": "2026-11-04T12:00:00.000Z",
+                "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+                "ended_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" }
+              },
+              {
+                "id": 4,
+                "admission_id": 3,
+                "kind": "acuity",
+                "value": { "level": "watch" },
+                "start_at": "2026-11-04T10:00:00.000Z",
+                "end_at": null,
+                "set_by": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+                "ended_by": null
+              },
+              {
+                "id": 5,
+                "admission_id": 3,
+                "kind": "fluid_limit",
+                "value": { "ml": 1500, "scope": "oral" },
+                "start_at": "2026-11-04T11:00:00.000Z",
+                "end_at": null,
+                "set_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+                "ended_by": null
+              },
+              {
+                "id": 6,
+                "admission_id": 3,
+                "kind": "thickened_fluids",
+                "value": { "level": 2 },
+                "start_at": "2026-11-04T11:00:00.000Z",
+                "end_at": null,
+                "set_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+                "ended_by": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    { "v": { "$": "map", "v": [] } },
+    { "v": { "$": "map", "v": [] } }
+  ],
+  [
+    { "v": "forbidden" },
+    {
+      "v": {
+        "order": {
+          "id": 1,
+          "admission_id": 5,
+          "kind": "diet",
+          "value": { "type": "renal", "texture": 7, "kcal": 1800, "protein_g": 60 },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "order": {
+          "id": 2,
+          "admission_id": 5,
+          "kind": "diet",
+          "value": { "type": "renal", "texture": 6, "kcal": 1800, "protein_g": 60 },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    { "v": "forbidden" },
+    {
+      "v": {
+        "order": {
+          "id": 3,
+          "admission_id": 5,
+          "kind": "diet",
+          "value": { "type": "renal", "texture": 7, "kcal": null, "protein_g": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "id": 3,
+        "admission_id": 5,
+        "kind": "diet",
+        "value": { "type": "renal", "texture": 7, "kcal": null, "protein_g": null },
+        "start_at": "2026-11-04T10:00:00.000Z",
+        "end_at": "2026-11-04T10:00:00.000Z",
+        "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+        "ended_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" }
+      }
+    },
+    {
+      "v": {
+        "order": {
+          "id": 4,
+          "admission_id": 5,
+          "kind": "diet",
+          "value": { "type": "renal", "texture": 7, "kcal": 1800, "protein_g": 60 },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "order": {
+          "id": 5,
+          "admission_id": 6,
+          "kind": "diet",
+          "value": { "type": "renal", "texture": 7, "kcal": 2000, "protein_g": 60 },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": [
+        {
+          "id": 4,
+          "admission_id": 5,
+          "kind": "diet",
+          "value": { "type": "renal", "texture": 7, "kcal": 1800, "protein_g": 60 },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "ended_by": null
+        },
+        {
+          "id": 3,
+          "admission_id": 5,
+          "kind": "diet",
+          "value": { "type": "renal", "texture": 7, "kcal": null, "protein_g": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": "2026-11-04T10:00:00.000Z",
+          "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "ended_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" }
+        },
+        {
+          "id": 2,
+          "admission_id": 5,
+          "kind": "diet",
+          "value": { "type": "renal", "texture": 6, "kcal": 1800, "protein_g": 60 },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": "2026-11-04T10:00:00.000Z",
+          "set_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+          "ended_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" }
+        },
+        {
+          "id": 1,
+          "admission_id": 5,
+          "kind": "diet",
+          "value": { "type": "renal", "texture": 7, "kcal": 1800, "protein_g": 60 },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": "2026-11-04T10:00:00.000Z",
+          "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "ended_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" }
+        }
+      ]
+    },
+    {
+      "v": [
+        {
+          "id": 4,
+          "admission_id": 5,
+          "kind": "diet",
+          "value": { "type": "renal", "texture": 7, "kcal": 1800, "protein_g": 60 },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "ended_by": null
+        }
+      ]
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            5,
+            {
+              "id": 4,
+              "admission_id": 5,
+              "kind": "diet",
+              "value": { "type": "renal", "texture": 7, "kcal": 1800, "protein_g": 60 },
+              "start_at": "2026-11-04T10:00:00.000Z",
+              "end_at": null,
+              "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+              "ended_by": null
+            }
+          ],
+          [
+            6,
+            {
+              "id": 5,
+              "admission_id": 6,
+              "kind": "diet",
+              "value": { "type": "renal", "texture": 7, "kcal": 2000, "protein_g": 60 },
+              "start_at": "2026-11-04T10:00:00.000Z",
+              "end_at": null,
+              "set_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+              "ended_by": null
+            }
+          ]
+        ]
+      }
+    },
+    { "v": { "$": "map", "v": [] } }
+  ],
+  [
+    { "v": { "ok": false, "error": "not_found" } },
+    {
+      "v": {
+        "order": {
+          "id": 1,
+          "admission_id": 2,
+          "kind": "catheter",
+          "value": { "type": "urethral", "inserted_at": "2026-11-03T10:00:00.000Z", "measure_every_h": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "review": { "id": 1, "order_id": 1, "at": "2026-11-04T10:00:00.000Z", "by": { "id": 4, "name": "Anita Thomas", "role": "nurse" } }
+      }
+    },
+    { "v": { "ok": false, "error": "already_reviewed" } },
+    {
+      "v": {
+        "order": {
+          "id": 2,
+          "admission_id": 2,
+          "kind": "catheter",
+          "value": { "type": "urethral", "inserted_at": "2026-11-03T14:00:00.000Z", "measure_every_h": null },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "review": { "id": 2, "order_id": 2, "at": "2026-11-04T11:00:00.000Z", "by": { "id": 5, "name": "Grace Lee", "role": "nurse" } }
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "review": { "id": 3, "order_id": 2, "at": "2026-11-05T12:00:00.000Z", "by": { "id": 5, "name": "Grace Lee", "role": "nurse" } }
+      }
+    },
+    { "v": { "id": 1, "order_id": 1, "at": "2026-11-04T10:00:00.000Z", "by": { "id": 4, "name": "Anita Thomas", "role": "nurse" } } },
+    { "v": { "id": 3, "order_id": 2, "at": "2026-11-05T12:00:00.000Z", "by": { "id": 5, "name": "Grace Lee", "role": "nurse" } } },
+    { "v": null },
+    { "v": { "id": 3, "order_id": 2, "at": "2026-11-05T12:00:00.000Z", "by": { "id": 5, "name": "Grace Lee", "role": "nurse" } } },
+    { "v": null },
+    {
+      "v": [
+        {
+          "id": 1,
+          "admission_id": 2,
+          "kind": "catheter",
+          "value": { "type": "urethral", "inserted_at": "2026-11-03T10:00:00.000Z", "measure_every_h": null },
+          "start_at": "2026-11-04T10:00:00.000Z",
+          "end_at": "2026-11-04T11:00:00.000Z",
+          "set_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "ended_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" }
+        },
+        {
+          "id": 2,
+          "admission_id": 2,
+          "kind": "catheter",
+          "value": { "type": "urethral", "inserted_at": "2026-11-03T14:00:00.000Z", "measure_every_h": null },
+          "start_at": "2026-11-04T11:00:00.000Z",
+          "end_at": null,
+          "set_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "ended_by": null
+        }
+      ]
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            2,
+            [
+              {
+                "id": 1,
+                "admission_id": 2,
+                "kind": "catheter",
+                "value": { "type": "urethral", "inserted_at": "2026-11-03T10:00:00.000Z", "measure_every_h": null },
+                "start_at": "2026-11-04T10:00:00.000Z",
+                "end_at": "2026-11-04T11:00:00.000Z",
+                "set_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+                "ended_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" }
+              },
+              {
+                "id": 2,
+                "admission_id": 2,
+                "kind": "catheter",
+                "value": { "type": "urethral", "inserted_at": "2026-11-03T14:00:00.000Z", "measure_every_h": null },
+                "start_at": "2026-11-04T11:00:00.000Z",
+                "end_at": null,
+                "set_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+                "ended_by": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            2,
+            [
+              {
+                "id": 1,
+                "admission_id": 2,
+                "kind": "catheter",
+                "value": { "type": "urethral", "inserted_at": "2026-11-03T10:00:00.000Z", "measure_every_h": null },
+                "start_at": "2026-11-04T10:00:00.000Z",
+                "end_at": "2026-11-04T11:00:00.000Z",
+                "set_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+                "ended_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" }
+              },
+              {
+                "id": 2,
+                "admission_id": 2,
+                "kind": "catheter",
+                "value": { "type": "urethral", "inserted_at": "2026-11-03T14:00:00.000Z", "measure_every_h": null },
+                "start_at": "2026-11-04T11:00:00.000Z",
+                "end_at": null,
+                "set_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+                "ended_by": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    { "v": { "$": "map", "v": [] } }
+  ],
+  [],
+  [
+    { "v": { "ok": false, "error": "not_found" } },
+    {
+      "v": {
+        "ok": true,
+        "referral": {
+          "id": 1,
+          "admission_id": 1,
+          "reason": "weight_loss",
+          "note": "Lost weight at home",
+          "status": "open",
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "created_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+          "acknowledged_at": null,
+          "acknowledged_by": null,
+          "closed_at": null,
+          "closed_by": null,
+          "outcome": null,
+          "next_review": null
+        }
+      }
+    },
+    { "v": { "ok": false, "error": "referral_open" } },
+    {
+      "v": {
+        "ok": true,
+        "referral": {
+          "id": 1,
+          "admission_id": 1,
+          "reason": "weight_loss",
+          "note": "Lost weight at home",
+          "status": "acknowledged",
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "created_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+          "acknowledged_at": "2026-11-04T11:00:00.000Z",
+          "acknowledged_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "closed_at": null,
+          "closed_by": null,
+          "outcome": null,
+          "next_review": null
+        }
+      }
+    },
+    { "v": { "ok": false, "error": "not_open" } },
+    { "v": { "ok": false, "error": "not_found" } },
+    {
+      "v": [
+        {
+          "admission": {
+            "id": 1,
+            "bed": "1",
+            "patient": "Arjun Nair",
+            "weight_kg": 72,
+            "qr_token": "ccX07UrvsfPoxAZbc2t0bg",
+            "admitted_at": "2026-11-04T10:00:00.000Z",
+            "ward_id": 1,
+            "ward_code": "2C",
+            "ward_name": "Surgical Ward 2C",
+            "mrn": "AT-100211"
+          },
+          "referral": {
+            "id": 1,
+            "admission_id": 1,
+            "reason": "weight_loss",
+            "note": "Lost weight at home",
+            "status": "acknowledged",
+            "created_at": "2026-11-04T10:00:00.000Z",
+            "created_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+            "acknowledged_at": "2026-11-04T11:00:00.000Z",
+            "acknowledged_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+            "closed_at": null,
+            "closed_by": null,
+            "outcome": null,
+            "next_review": null
+          }
+        }
+      ]
+    },
+    {
+      "v": {
+        "ok": true,
+        "referral": {
+          "id": 1,
+          "admission_id": 1,
+          "reason": "weight_loss",
+          "note": "Lost weight at home",
+          "status": "closed",
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "created_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+          "acknowledged_at": "2026-11-04T11:00:00.000Z",
+          "acknowledged_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "closed_at": "2026-11-04T12:00:00.000Z",
+          "closed_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "outcome": "supplements_started",
+          "next_review": "2026-11-05"
+        }
+      }
+    },
+    { "v": { "ok": false, "error": "already_closed" } },
+    { "v": { "ok": false, "error": "not_found" } },
+    {
+      "v": {
+        "ok": true,
+        "referral": {
+          "id": 2,
+          "admission_id": 1,
+          "reason": "poor_intake",
+          "note": null,
+          "status": "open",
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "acknowledged_at": null,
+          "acknowledged_by": null,
+          "closed_at": null,
+          "closed_by": null,
+          "outcome": null,
+          "next_review": null
+        }
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "referral": {
+          "id": 3,
+          "admission_id": 5,
+          "reason": "diet_query",
+          "note": null,
+          "status": "open",
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "created_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "acknowledged_at": null,
+          "acknowledged_by": null,
+          "closed_at": null,
+          "closed_by": null,
+          "outcome": null,
+          "next_review": null
+        }
+      }
+    },
+    { "v": { "ok": false, "error": "not_open" } },
+    {
+      "v": {
+        "id": 1,
+        "admission_id": 1,
+        "reason": "weight_loss",
+        "note": "Lost weight at home",
+        "status": "closed",
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "created_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+        "acknowledged_at": "2026-11-04T11:00:00.000Z",
+        "acknowledged_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+        "closed_at": "2026-11-04T12:00:00.000Z",
+        "closed_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+        "outcome": "supplements_started",
+        "next_review": "2026-11-05"
+      }
+    },
+    {
+      "v": {
+        "id": 2,
+        "admission_id": 1,
+        "reason": "poor_intake",
+        "note": null,
+        "status": "open",
+        "created_at": "2026-11-04T12:00:00.000Z",
+        "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "acknowledged_at": null,
+        "acknowledged_by": null,
+        "closed_at": null,
+        "closed_by": null,
+        "outcome": null,
+        "next_review": null
+      }
+    },
+    { "v": null },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            1,
+            {
+              "id": 2,
+              "admission_id": 1,
+              "reason": "poor_intake",
+              "note": null,
+              "status": "open",
+              "created_at": "2026-11-04T12:00:00.000Z",
+              "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "acknowledged_at": null,
+              "acknowledged_by": null,
+              "closed_at": null,
+              "closed_by": null,
+              "outcome": null,
+              "next_review": null
+            }
+          ],
+          [
+            5,
+            {
+              "id": 3,
+              "admission_id": 5,
+              "reason": "diet_query",
+              "note": null,
+              "status": "open",
+              "created_at": "2026-11-04T12:00:00.000Z",
+              "created_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+              "acknowledged_at": null,
+              "acknowledged_by": null,
+              "closed_at": null,
+              "closed_by": null,
+              "outcome": null,
+              "next_review": null
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            1,
+            {
+              "id": 2,
+              "admission_id": 1,
+              "reason": "poor_intake",
+              "note": null,
+              "status": "open",
+              "created_at": "2026-11-04T12:00:00.000Z",
+              "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "acknowledged_at": null,
+              "acknowledged_by": null,
+              "closed_at": null,
+              "closed_by": null,
+              "outcome": null,
+              "next_review": null
+            }
+          ],
+          [
+            5,
+            {
+              "id": 3,
+              "admission_id": 5,
+              "reason": "diet_query",
+              "note": null,
+              "status": "open",
+              "created_at": "2026-11-04T12:00:00.000Z",
+              "created_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+              "acknowledged_at": null,
+              "acknowledged_by": null,
+              "closed_at": null,
+              "closed_by": null,
+              "outcome": null,
+              "next_review": null
+            }
+          ]
+        ]
+      }
+    },
+    { "v": { "$": "map", "v": [] } },
+    { "v": { "$": "map", "v": [] } },
+    {
+      "v": [
+        {
+          "admission": {
+            "id": 1,
+            "bed": "1",
+            "patient": "Arjun Nair",
+            "weight_kg": 72,
+            "qr_token": "ccX07UrvsfPoxAZbc2t0bg",
+            "admitted_at": "2026-11-04T10:00:00.000Z",
+            "ward_id": 1,
+            "ward_code": "2C",
+            "ward_name": "Surgical Ward 2C",
+            "mrn": "AT-100211"
+          },
+          "referral": {
+            "id": 2,
+            "admission_id": 1,
+            "reason": "poor_intake",
+            "note": null,
+            "status": "open",
+            "created_at": "2026-11-04T12:00:00.000Z",
+            "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+            "acknowledged_at": null,
+            "acknowledged_by": null,
+            "closed_at": null,
+            "closed_by": null,
+            "outcome": null,
+            "next_review": null
+          }
+        },
+        {
+          "admission": {
+            "id": 5,
+            "bed": "6",
+            "patient": "Fatima Khan",
+            "weight_kg": 61,
+            "qr_token": "4iqymO-XXebjTnibVVyXHw",
+            "admitted_at": "2026-11-04T10:00:00.000Z",
+            "ward_id": 1,
+            "ward_code": "2C",
+            "ward_name": "Surgical Ward 2C",
+            "mrn": "AT-100216"
+          },
+          "referral": {
+            "id": 3,
+            "admission_id": 5,
+            "reason": "diet_query",
+            "note": null,
+            "status": "open",
+            "created_at": "2026-11-04T12:00:00.000Z",
+            "created_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+            "acknowledged_at": null,
+            "acknowledged_by": null,
+            "closed_at": null,
+            "closed_by": null,
+            "outcome": null,
+            "next_review": null
+          }
+        }
+      ]
+    },
+    { "v": [] },
+    {
+      "v": [
+        {
+          "id": 2,
+          "admission_id": 1,
+          "reason": "poor_intake",
+          "note": null,
+          "status": "open",
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "acknowledged_at": null,
+          "acknowledged_by": null,
+          "closed_at": null,
+          "closed_by": null,
+          "outcome": null,
+          "next_review": null
+        },
+        {
+          "id": 1,
+          "admission_id": 1,
+          "reason": "weight_loss",
+          "note": "Lost weight at home",
+          "status": "closed",
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "created_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+          "acknowledged_at": "2026-11-04T11:00:00.000Z",
+          "acknowledged_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "closed_at": "2026-11-04T12:00:00.000Z",
+          "closed_by": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "outcome": "supplements_started",
+          "next_review": "2026-11-05"
+        }
+      ]
+    },
+    {
+      "v": [
+        {
+          "id": 2,
+          "admission_id": 1,
+          "reason": "poor_intake",
+          "note": null,
+          "status": "open",
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "acknowledged_at": null,
+          "acknowledged_by": null,
+          "closed_at": null,
+          "closed_by": null,
+          "outcome": null,
+          "next_review": null
+        }
+      ]
+    },
+    { "v": { "$": "set", "v": [1, 2, 3, 4] } }
+  ],
+  [
+    { "v": { "ok": false, "error": "not_found" } },
+    { "v": { "ok": false, "error": "not_assigned" } },
+    {
+      "v": {
+        "ok": true,
+        "assignment": {
+          "id": 1,
+          "admission_id": 3,
+          "staff": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "assigned_at": "2026-11-04T10:00:00.000Z",
+          "assigned_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "ended_at": null,
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "assignment": {
+          "id": 1,
+          "admission_id": 3,
+          "staff": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "assigned_at": "2026-11-04T10:00:00.000Z",
+          "assigned_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "ended_at": null,
+          "ended_by": null
+        },
+        "created": false
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "assignment": {
+          "id": 2,
+          "admission_id": 3,
+          "staff": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" },
+          "assigned_at": "2026-11-04T11:00:00.000Z",
+          "assigned_by": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" },
+          "ended_at": null,
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "assignment": {
+          "id": 3,
+          "admission_id": 6,
+          "staff": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "assigned_at": "2026-11-04T11:00:00.000Z",
+          "assigned_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+          "ended_at": null,
+          "ended_by": null
+        },
+        "created": true
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "referral": {
+          "id": 1,
+          "admission_id": 3,
+          "reason": "poor_intake",
+          "note": null,
+          "status": "open",
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "acknowledged_at": null,
+          "acknowledged_by": null,
+          "closed_at": null,
+          "closed_by": null,
+          "outcome": null,
+          "next_review": null
+        }
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "assignment": {
+          "id": 2,
+          "admission_id": 3,
+          "staff": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" },
+          "assigned_at": "2026-11-04T11:00:00.000Z",
+          "assigned_by": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" },
+          "ended_at": "2026-11-04T12:00:00.000Z",
+          "ended_by": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" }
+        }
+      }
+    },
+    { "v": { "ok": false, "error": "not_assigned" } },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            6,
+            {
+              "id": 3,
+              "admission_id": 6,
+              "staff": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+              "assigned_at": "2026-11-04T11:00:00.000Z",
+              "assigned_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+              "ended_at": null,
+              "ended_by": null
+            }
+          ]
+        ]
+      }
+    },
+    { "v": { "$": "map", "v": [] } },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            6,
+            {
+              "id": 3,
+              "admission_id": 6,
+              "staff": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+              "assigned_at": "2026-11-04T11:00:00.000Z",
+              "assigned_by": { "id": 8, "name": "Divya Kapoor", "role": "nurse" },
+              "ended_at": null,
+              "ended_by": null
+            }
+          ]
+        ]
+      }
+    },
+    { "v": { "$": "map", "v": [] } },
+    {
+      "v": [
+        {
+          "id": 2,
+          "admission_id": 3,
+          "staff": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" },
+          "assigned_at": "2026-11-04T11:00:00.000Z",
+          "assigned_by": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" },
+          "ended_at": "2026-11-04T12:00:00.000Z",
+          "ended_by": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" }
+        },
+        {
+          "id": 1,
+          "admission_id": 3,
+          "staff": { "id": 11, "name": "Sana Mirza", "role": "dietitian" },
+          "assigned_at": "2026-11-04T10:00:00.000Z",
+          "assigned_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "ended_at": "2026-11-04T11:00:00.000Z",
+          "ended_by": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" }
+        }
+      ]
+    },
+    {
+      "v": [
+        {
+          "id": 2,
+          "admission_id": 3,
+          "staff": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" },
+          "assigned_at": "2026-11-04T11:00:00.000Z",
+          "assigned_by": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" },
+          "ended_at": "2026-11-04T12:00:00.000Z",
+          "ended_by": { "id": 10, "name": "Lakshmi Iyer", "role": "matron" }
+        }
+      ]
+    }
+  ]
+]

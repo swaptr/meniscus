@@ -1,0 +1,31 @@
+{
+  "name": "@meniscus/config",
+  "private": true,
+  "type": "module",
+  "description": "Shared tooling config: TypeScript bases, ESLint flat config, Prettier.",
+  "exports": {
+    "./eslint": "./eslint.js",
+    "./prettier": "./prettier.json",
+    "./tsconfig/base.json": "./tsconfig/base.json",
+    "./tsconfig/node.json": "./tsconfig/node.json",
+    "./tsconfig/dom.json": "./tsconfig/dom.json"
+  },
+  "dependencies": {
+    "@eslint/js": "10.0.1",
+    "@stylexjs/eslint-plugin": "0.19.1",
+    "eslint": "10.14.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.7",
+    "globals": "17.13.0",
+    "prettier": "3.9.10",
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "typescript-eslint": "8.72.1"
+  },
+  "scripts": {
+    "typecheck": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5"
+  }
+}

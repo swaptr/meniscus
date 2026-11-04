@@ -1,0 +1,327 @@
+[
+  [
+    {
+      "v": {
+        "id": 1,
+        "kind": "voice",
+        "mime": "audio/webm",
+        "size": 4000,
+        "duration_ms": 3200,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 2,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 900,
+        "duration_ms": null,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "served_meal": "lunch"
+      }
+    },
+    {
+      "v": {
+        "id": 3,
+        "kind": "voice",
+        "mime": "audio/webm",
+        "size": 4000,
+        "duration_ms": null,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "served_meal": null
+      }
+    }
+  ],
+  [{ "v": { "$": "u" } }],
+  [
+    {
+      "v": {
+        "id": 1,
+        "kind": "voice",
+        "mime": "audio/webm",
+        "size": 4000,
+        "duration_ms": 3200,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 2,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 900,
+        "duration_ms": null,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "kind": "voice",
+        "mime": "audio/webm",
+        "size": 4000,
+        "duration_ms": 3200,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "kind": "voice",
+        "mime": "audio/webm",
+        "size": 4000,
+        "duration_ms": 3200,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 2,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 900,
+        "duration_ms": null,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 2,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 900,
+        "duration_ms": null,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "served_meal": null
+      }
+    },
+    { "v": { "$": "u" } },
+    { "v": { "$": "u" } },
+    { "v": true },
+    { "v": false },
+    { "v": false },
+    { "v": true },
+    { "v": false },
+    { "v": true },
+    { "v": true },
+    { "v": false }
+  ],
+  [
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 900,
+        "duration_ms": null,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 900,
+        "duration_ms": null,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": null
+      }
+    },
+    { "v": { "$": "u" } },
+    {
+      "v": {
+        "id": 2,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 900,
+        "duration_ms": null,
+        "created_at": "2026-11-03T09:01:00.000Z",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "served_meal": null
+      }
+    },
+    { "v": false },
+    { "v": true }
+  ],
+  [
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 900,
+        "duration_ms": null,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "admission_id": 1,
+        "direction": "in",
+        "category": "water",
+        "volume_ml": 200,
+        "item": null,
+        "notes": null,
+        "source": "photo",
+        "confidence": null,
+        "status": "pending",
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "reviewed_at": null,
+        "has_photo": true,
+        "recorded_ml": 200,
+        "evidence": null,
+        "recorded_at": "2026-11-02T09:00:00.000Z",
+        "late": false,
+        "created_by": null,
+        "reviewed_by": null,
+        "approved_ml": null,
+        "amended_at": null,
+        "reject_reason": null,
+        "urine_colour": null,
+        "urine_rgb": null,
+        "media": {
+          "id": 1,
+          "kind": "photo",
+          "mime": "image/jpeg",
+          "size": 900,
+          "duration_ms": null,
+          "created_at": "2026-11-02T09:00:00.000Z",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "served_meal": null
+        },
+        "levels": null,
+        "iddsi_level": null,
+        "drink": null,
+        "labeled_media": null
+      }
+    },
+    {
+      "v": {
+        "id": 2,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 900,
+        "duration_ms": null,
+        "created_at": "2026-11-03T15:00:00.000Z",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 900,
+        "duration_ms": null,
+        "created_at": "2026-11-02T09:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": null
+      }
+    }
+  ],
+  [],
+  [],
+  [
+    { "v": 1 },
+    {
+      "v": {
+        "id": 1,
+        "kind": "text",
+        "mode": null,
+        "models": ["muse-spark"],
+        "hint": null,
+        "staff_id": 4,
+        "admission_id": 1,
+        "created_at": 1793610000000,
+        "confidence": null,
+        "issues": [],
+        "needs_review": false,
+        "drafts": 2,
+        "output": {
+          "kind": "text",
+          "drafts": [
+            { "category": "water", "volume_ml": 200, "urine_colour": null, "drink": "tea" },
+            { "category": "urine", "volume_ml": 350, "urine_colour": "pale", "drink": null }
+          ]
+        }
+      }
+    },
+    { "v": 2 },
+    {
+      "v": {
+        "id": 2,
+        "kind": "photo",
+        "mode": "sam+spark",
+        "models": ["sam-3.1", "muse-spark"],
+        "hint": "cup",
+        "staff_id": 4,
+        "admission_id": 2,
+        "created_at": 1793610000000,
+        "confidence": 0.82,
+        "issues": ["blurred"],
+        "needs_review": true,
+        "drafts": 1,
+        "output": {
+          "kind": "photo",
+          "container": "cup",
+          "fluid": "tea",
+          "volume_ml": 180,
+          "capacity_ml": 250,
+          "marks_visible": true,
+          "urine_colour": null,
+          "draft": { "category": "water", "volume_ml": 180, "urine_colour": null, "drink": "tea" }
+        }
+      }
+    },
+    { "v": 3 },
+    {
+      "v": {
+        "id": 3,
+        "kind": "text",
+        "mode": null,
+        "models": ["muse-spark"],
+        "hint": null,
+        "staff_id": 4,
+        "admission_id": null,
+        "created_at": 1793610000000,
+        "confidence": null,
+        "issues": [],
+        "needs_review": false,
+        "drafts": 2,
+        "output": {
+          "kind": "text",
+          "drafts": [
+            { "category": "water", "volume_ml": 200, "urine_colour": null, "drink": "tea" },
+            { "category": "urine", "volume_ml": 350, "urine_colour": "pale", "drink": null }
+          ]
+        }
+      }
+    },
+    { "v": { "$": "u" } }
+  ],
+  []
+]

@@ -1,0 +1,7 @@
+{
+  "extends": "@meniscus/config/tsconfig/dom.json",
+  "compilerOptions": {
+    "types": ["vite/client", "vite-plugin-pwa/client"]
+  },
+  "include": ["src", "vite.config.ts"]
+}

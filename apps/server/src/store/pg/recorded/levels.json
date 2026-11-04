@@ -1,0 +1,2292 @@
+[
+  [
+    { "v": { "$": "u" } },
+    { "v": { "$": "u" } },
+    { "v": [] },
+    {
+      "v": {
+        "level": {
+          "id": 1,
+          "admission_id": 3,
+          "container": "water_jug",
+          "volume_ml": 800,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "media": null,
+          "labeled_media": null
+        },
+        "previous_ml": null,
+        "entry": null
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T11:00:00.000Z",
+        "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+        "served_meal": null
+      }
+    },
+    { "v": 1 },
+    {
+      "v": {
+        "level": {
+          "id": 2,
+          "admission_id": 3,
+          "container": "water_jug",
+          "volume_ml": 550,
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T11:00:00.000Z",
+            "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "served_meal": null
+          },
+          "labeled_media": null
+        },
+        "previous_ml": 800,
+        "entry": {
+          "id": 1,
+          "admission_id": 3,
+          "direction": "in",
+          "category": "water",
+          "volume_ml": 250,
+          "item": "water jug: 800 \u2192 550 mL",
+          "notes": null,
+          "source": "photo",
+          "confidence": 0.8,
+          "status": "pending",
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "reviewed_at": null,
+          "has_photo": true,
+          "recorded_ml": 250,
+          "evidence": {
+            "kind": "photo",
+            "mode": "spark",
+            "reading": { "container": "urine_bag", "volume_ml": 150 },
+            "segmentation": null,
+            "review_reasons": [],
+            "trace": [],
+            "colour": "#ccaa33"
+          },
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "reviewed_by": null,
+          "approved_ml": null,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": null,
+          "urine_rgb": null,
+          "media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T11:00:00.000Z",
+            "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "served_meal": null
+          },
+          "levels": {
+            "before": {
+              "id": 1,
+              "volume_ml": 800,
+              "created_at": "2026-11-04T10:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": null,
+              "residual_ml": null,
+              "labeled_media": null
+            },
+            "after": {
+              "id": 2,
+              "volume_ml": 550,
+              "created_at": "2026-11-04T11:00:00.000Z",
+              "media": {
+                "id": 1,
+                "kind": "photo",
+                "mime": "image/jpeg",
+                "size": 1234,
+                "duration_ms": null,
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                "served_meal": null
+              },
+              "evidence": {
+                "kind": "photo",
+                "mode": "spark",
+                "reading": { "container": "urine_bag", "volume_ml": 150 },
+                "segmentation": null,
+                "review_reasons": [],
+                "trace": [],
+                "colour": "#ccaa33"
+              },
+              "event": null,
+              "residual_ml": null,
+              "labeled_media": null
+            }
+          },
+          "iddsi_level": null,
+          "drink": "water",
+          "labeled_media": null
+        }
+      }
+    },
+    { "v": true },
+    {
+      "v": {
+        "level": {
+          "id": 3,
+          "admission_id": 3,
+          "container": "water_jug",
+          "volume_ml": 1000,
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "media": null,
+          "labeled_media": null
+        },
+        "previous_ml": 550,
+        "entry": null
+      }
+    },
+    {
+      "v": {
+        "level": {
+          "id": 4,
+          "admission_id": 3,
+          "container": "water_bottle",
+          "volume_ml": 400,
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "media": null,
+          "labeled_media": null
+        },
+        "previous_ml": null,
+        "entry": null
+      }
+    },
+    {
+      "v": [
+        {
+          "id": 4,
+          "admission_id": 3,
+          "container": "water_bottle",
+          "volume_ml": 400,
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "media": null,
+          "labeled_media": null
+        },
+        {
+          "id": 3,
+          "admission_id": 3,
+          "container": "water_jug",
+          "volume_ml": 1000,
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "media": null,
+          "labeled_media": null
+        }
+      ]
+    },
+    {
+      "v": {
+        "level": {
+          "id": 5,
+          "admission_id": 3,
+          "container": "water_jug",
+          "volume_ml": 200,
+          "created_at": "2026-11-05T13:00:00.000Z",
+          "media": null,
+          "labeled_media": null
+        },
+        "previous_ml": null,
+        "entry": null
+      }
+    },
+    { "e": { "name": "ReadLinkTaken", "message": "already linked" } },
+    {
+      "v": [
+        {
+          "id": 4,
+          "admission_id": 3,
+          "container": "water_bottle",
+          "volume_ml": 400,
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "media": null,
+          "labeled_media": null
+        },
+        {
+          "id": 5,
+          "admission_id": 3,
+          "container": "water_jug",
+          "volume_ml": 200,
+          "created_at": "2026-11-05T13:00:00.000Z",
+          "media": null,
+          "labeled_media": null
+        }
+      ]
+    }
+  ],
+  [],
+  [
+    { "v": { "$": "u" } },
+    {
+      "v": {
+        "reading": {
+          "id": 1,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 600,
+          "baseline_ml": 0,
+          "rise_ml": 600,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "entry": { "id": 1, "volume_ml": 600, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": {
+          "id": 1,
+          "admission_id": 3,
+          "direction": "out",
+          "category": "urine",
+          "volume_ml": 600,
+          "item": "urine bag: 0 \u2192 600 mL",
+          "notes": "clear",
+          "source": "manual",
+          "confidence": null,
+          "status": "pending",
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "reviewed_at": null,
+          "has_photo": false,
+          "recorded_ml": 600,
+          "evidence": null,
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "reviewed_by": null,
+          "approved_ml": null,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": "pale",
+          "urine_rgb": null,
+          "media": null,
+          "levels": {
+            "before": null,
+            "after": {
+              "id": 1,
+              "volume_ml": 600,
+              "created_at": "2026-11-04T10:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "emptied",
+              "residual_ml": null,
+              "labeled_media": null
+            }
+          },
+          "iddsi_level": null,
+          "drink": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T11:00:00.000Z",
+        "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+        "served_meal": null
+      }
+    },
+    { "v": 1 },
+    {
+      "v": {
+        "reading": {
+          "id": 2,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 150,
+          "baseline_ml": 0,
+          "rise_ml": 150,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "photo",
+          "media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T11:00:00.000Z",
+            "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "served_meal": null
+          },
+          "proof_media": null,
+          "evidence": {
+            "kind": "photo",
+            "mode": "spark",
+            "reading": { "container": "urine_bag", "volume_ml": 150 },
+            "segmentation": null,
+            "review_reasons": [],
+            "trace": [],
+            "colour": "#ccaa33"
+          },
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "entry": { "id": 2, "volume_ml": 150, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": {
+          "id": 2,
+          "admission_id": 3,
+          "direction": "out",
+          "category": "urine",
+          "volume_ml": 150,
+          "item": "urine bag: 0 \u2192 150 mL",
+          "notes": null,
+          "source": "photo",
+          "confidence": 0.7,
+          "status": "pending",
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "reviewed_at": null,
+          "has_photo": true,
+          "recorded_ml": 150,
+          "evidence": {
+            "kind": "photo",
+            "mode": "spark",
+            "reading": { "container": "urine_bag", "volume_ml": 150 },
+            "segmentation": null,
+            "review_reasons": [],
+            "trace": [],
+            "colour": "#ccaa33"
+          },
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "reviewed_by": null,
+          "approved_ml": null,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": "dark",
+          "urine_rgb": "#aa8800",
+          "media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T11:00:00.000Z",
+            "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "served_meal": null
+          },
+          "levels": {
+            "before": {
+              "id": 1,
+              "volume_ml": 600,
+              "created_at": "2026-11-04T10:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "emptied",
+              "residual_ml": null,
+              "labeled_media": null
+            },
+            "after": {
+              "id": 2,
+              "volume_ml": 150,
+              "created_at": "2026-11-04T11:00:00.000Z",
+              "media": {
+                "id": 1,
+                "kind": "photo",
+                "mime": "image/jpeg",
+                "size": 1234,
+                "duration_ms": null,
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                "served_meal": null
+              },
+              "evidence": {
+                "kind": "photo",
+                "mode": "spark",
+                "reading": { "container": "urine_bag", "volume_ml": 150 },
+                "segmentation": null,
+                "review_reasons": [],
+                "trace": [],
+                "colour": "#ccaa33"
+              },
+              "event": "check",
+              "residual_ml": null,
+              "labeled_media": null
+            }
+          },
+          "iddsi_level": null,
+          "drink": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "reading": {
+          "id": 3,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 150,
+          "baseline_ml": 150,
+          "rise_ml": 0,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "recorded_at": "2026-11-04T12:00:00.000Z",
+          "late": false,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": null
+      }
+    },
+    {
+      "e": {
+        "name": "Duplicate",
+        "message": "duplicate_reading",
+        "duplicate": { "id": 3, "event": "check", "volume_ml": 150, "created_at": "2026-11-04T12:00:00.000Z" }
+      }
+    },
+    {
+      "v": {
+        "reading": {
+          "id": 4,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 160,
+          "baseline_ml": 150,
+          "rise_ml": 10,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:05:00.000Z",
+          "recorded_at": "2026-11-04T12:05:00.000Z",
+          "late": false,
+          "entry": { "id": 3, "volume_ml": 10, "status": "pending" },
+          "confirmed_duplicate_of": 3,
+          "labeled_media": null
+        },
+        "entry": {
+          "id": 3,
+          "admission_id": 3,
+          "direction": "out",
+          "category": "urine",
+          "volume_ml": 10,
+          "item": "urine bag: 150 \u2192 160 mL",
+          "notes": null,
+          "source": "manual",
+          "confidence": null,
+          "status": "pending",
+          "created_at": "2026-11-04T12:05:00.000Z",
+          "reviewed_at": null,
+          "has_photo": false,
+          "recorded_ml": 10,
+          "evidence": null,
+          "recorded_at": "2026-11-04T12:05:00.000Z",
+          "late": false,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "reviewed_by": null,
+          "approved_ml": null,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": null,
+          "urine_rgb": null,
+          "media": null,
+          "levels": {
+            "before": {
+              "id": 3,
+              "volume_ml": 150,
+              "created_at": "2026-11-04T12:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "check",
+              "residual_ml": null,
+              "labeled_media": null
+            },
+            "after": {
+              "id": 4,
+              "volume_ml": 160,
+              "created_at": "2026-11-04T12:05:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "check",
+              "residual_ml": null,
+              "labeled_media": null
+            }
+          },
+          "iddsi_level": null,
+          "drink": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "reading": {
+          "id": 5,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 40,
+          "baseline_ml": 0,
+          "rise_ml": 40,
+          "fell": true,
+          "fell_from_ml": 160,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T14:00:00.000Z",
+          "recorded_at": "2026-11-04T14:00:00.000Z",
+          "late": false,
+          "entry": { "id": 4, "volume_ml": 40, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": {
+          "id": 4,
+          "admission_id": 3,
+          "direction": "out",
+          "category": "urine",
+          "volume_ml": 40,
+          "item": "urine bag: 160 \u2192 40 mL, level fell",
+          "notes": null,
+          "source": "manual",
+          "confidence": null,
+          "status": "pending",
+          "created_at": "2026-11-04T14:00:00.000Z",
+          "reviewed_at": null,
+          "has_photo": false,
+          "recorded_ml": 40,
+          "evidence": null,
+          "recorded_at": "2026-11-04T14:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "reviewed_by": null,
+          "approved_ml": null,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": null,
+          "urine_rgb": null,
+          "media": null,
+          "levels": {
+            "before": {
+              "id": 4,
+              "volume_ml": 160,
+              "created_at": "2026-11-04T12:05:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "check",
+              "residual_ml": null,
+              "labeled_media": null
+            },
+            "after": {
+              "id": 5,
+              "volume_ml": 40,
+              "created_at": "2026-11-04T14:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "check",
+              "residual_ml": null,
+              "labeled_media": null
+            }
+          },
+          "iddsi_level": null,
+          "drink": null,
+          "labeled_media": null
+        }
+      }
+    },
+    { "e": { "name": "Forbidden", "message": "forbidden" } },
+    {
+      "v": {
+        "reading": {
+          "id": 6,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 0,
+          "baseline_ml": 0,
+          "rise_ml": 0,
+          "fell": true,
+          "fell_from_ml": 160,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T13:00:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": true,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": null
+      }
+    },
+    {
+      "v": {
+        "reading": {
+          "id": 7,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 100,
+          "baseline_ml": 0,
+          "rise_ml": 100,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T10:30:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": true,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": null
+      }
+    },
+    {
+      "v": {
+        "reading": {
+          "id": 8,
+          "container": "stoma_bag",
+          "event": "check",
+          "volume_ml": 120,
+          "baseline_ml": 0,
+          "rise_ml": 120,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T14:10:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": false,
+          "entry": { "id": 5, "volume_ml": 120, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": {
+          "id": 5,
+          "admission_id": 3,
+          "direction": "out",
+          "category": "stoma",
+          "volume_ml": 120,
+          "item": "stoma bag: 0 \u2192 120 mL",
+          "notes": null,
+          "source": "manual",
+          "confidence": null,
+          "status": "pending",
+          "created_at": "2026-11-04T14:10:00.000Z",
+          "reviewed_at": null,
+          "has_photo": false,
+          "recorded_ml": 120,
+          "evidence": null,
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "reviewed_by": null,
+          "approved_ml": null,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": null,
+          "urine_rgb": null,
+          "media": null,
+          "levels": {
+            "before": null,
+            "after": {
+              "id": 8,
+              "volume_ml": 120,
+              "created_at": "2026-11-04T14:10:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "check",
+              "residual_ml": null,
+              "labeled_media": null
+            }
+          },
+          "iddsi_level": null,
+          "drink": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "reading": {
+          "id": 9,
+          "container": "urine_bag",
+          "event": "bag_changed",
+          "volume_ml": 0,
+          "baseline_ml": 0,
+          "rise_ml": 0,
+          "fell": true,
+          "fell_from_ml": 40,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T15:00:00.000Z",
+          "recorded_at": "2026-11-04T15:00:00.000Z",
+          "late": false,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": null
+      }
+    },
+    {
+      "v": [
+        {
+          "id": 1,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 600,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "entry": { "id": 1, "volume_ml": 600, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 7,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 100,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T10:30:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": true,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 2,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 150,
+          "residual_ml": null,
+          "source": "photo",
+          "media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T11:00:00.000Z",
+            "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "served_meal": null
+          },
+          "proof_media": null,
+          "evidence": {
+            "kind": "photo",
+            "mode": "spark",
+            "reading": { "container": "urine_bag", "volume_ml": 150 },
+            "segmentation": null,
+            "review_reasons": [],
+            "trace": [],
+            "colour": "#ccaa33"
+          },
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "entry": { "id": 2, "volume_ml": 150, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 3,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 150,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "recorded_at": "2026-11-04T12:00:00.000Z",
+          "late": false,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 4,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 160,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:05:00.000Z",
+          "recorded_at": "2026-11-04T12:05:00.000Z",
+          "late": false,
+          "entry": { "id": 3, "volume_ml": 10, "status": "pending" },
+          "confirmed_duplicate_of": 3,
+          "labeled_media": null
+        },
+        {
+          "id": 6,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 0,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T13:00:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": true,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 5,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 40,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T14:00:00.000Z",
+          "recorded_at": "2026-11-04T14:00:00.000Z",
+          "late": false,
+          "entry": { "id": 4, "volume_ml": 40, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 8,
+          "container": "stoma_bag",
+          "event": "check",
+          "volume_ml": 120,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T14:10:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": false,
+          "entry": { "id": 5, "volume_ml": 120, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 9,
+          "container": "urine_bag",
+          "event": "bag_changed",
+          "volume_ml": 0,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T15:00:00.000Z",
+          "recorded_at": "2026-11-04T15:00:00.000Z",
+          "late": false,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        }
+      ]
+    },
+    {
+      "v": [
+        {
+          "id": 4,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 160,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:05:00.000Z",
+          "recorded_at": "2026-11-04T12:05:00.000Z",
+          "late": false,
+          "entry": { "id": 3, "volume_ml": 10, "status": "pending" },
+          "confirmed_duplicate_of": 3,
+          "labeled_media": null
+        },
+        {
+          "id": 6,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 0,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T13:00:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": true,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 5,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 40,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T14:00:00.000Z",
+          "recorded_at": "2026-11-04T14:00:00.000Z",
+          "late": false,
+          "entry": { "id": 4, "volume_ml": 40, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 8,
+          "container": "stoma_bag",
+          "event": "check",
+          "volume_ml": 120,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T14:10:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": false,
+          "entry": { "id": 5, "volume_ml": 120, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 9,
+          "container": "urine_bag",
+          "event": "bag_changed",
+          "volume_ml": 0,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T15:00:00.000Z",
+          "recorded_at": "2026-11-04T15:00:00.000Z",
+          "late": false,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        }
+      ]
+    },
+    { "v": [] },
+    { "e": { "name": "ReadLinkTaken", "message": "already linked" } },
+    {
+      "v": [
+        {
+          "id": 1,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 600,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "entry": { "id": 1, "volume_ml": 600, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 7,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 100,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T10:30:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": true,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 2,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 150,
+          "residual_ml": null,
+          "source": "photo",
+          "media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T11:00:00.000Z",
+            "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "served_meal": null
+          },
+          "proof_media": null,
+          "evidence": {
+            "kind": "photo",
+            "mode": "spark",
+            "reading": { "container": "urine_bag", "volume_ml": 150 },
+            "segmentation": null,
+            "review_reasons": [],
+            "trace": [],
+            "colour": "#ccaa33"
+          },
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "entry": { "id": 2, "volume_ml": 150, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 3,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 150,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "recorded_at": "2026-11-04T12:00:00.000Z",
+          "late": false,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 4,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 160,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:05:00.000Z",
+          "recorded_at": "2026-11-04T12:05:00.000Z",
+          "late": false,
+          "entry": { "id": 3, "volume_ml": 10, "status": "pending" },
+          "confirmed_duplicate_of": 3,
+          "labeled_media": null
+        },
+        {
+          "id": 6,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 0,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T13:00:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": true,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 5,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 40,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T14:00:00.000Z",
+          "recorded_at": "2026-11-04T14:00:00.000Z",
+          "late": false,
+          "entry": { "id": 4, "volume_ml": 40, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 8,
+          "container": "stoma_bag",
+          "event": "check",
+          "volume_ml": 120,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T14:10:00.000Z",
+          "recorded_at": "2026-11-04T14:10:00.000Z",
+          "late": false,
+          "entry": { "id": 5, "volume_ml": 120, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        {
+          "id": 9,
+          "container": "urine_bag",
+          "event": "bag_changed",
+          "volume_ml": 0,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "created_at": "2026-11-04T15:00:00.000Z",
+          "recorded_at": "2026-11-04T15:00:00.000Z",
+          "late": false,
+          "entry": null,
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "v": {
+        "reading": {
+          "id": 1,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 500,
+          "baseline_ml": 0,
+          "rise_ml": 500,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "entry": { "id": 1, "volume_ml": 500, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": {
+          "id": 1,
+          "admission_id": 3,
+          "direction": "out",
+          "category": "urine",
+          "volume_ml": 500,
+          "item": "urine bag: 0 \u2192 500 mL",
+          "notes": null,
+          "source": "manual",
+          "confidence": null,
+          "status": "pending",
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "reviewed_at": null,
+          "has_photo": false,
+          "recorded_ml": 500,
+          "evidence": null,
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "reviewed_by": null,
+          "approved_ml": null,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": null,
+          "urine_rgb": null,
+          "media": null,
+          "levels": {
+            "before": null,
+            "after": {
+              "id": 1,
+              "volume_ml": 500,
+              "created_at": "2026-11-04T10:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "emptied",
+              "residual_ml": null,
+              "labeled_media": null
+            }
+          },
+          "iddsi_level": null,
+          "drink": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "reading": {
+          "id": 2,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 200,
+          "baseline_ml": 0,
+          "rise_ml": 200,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "entry": { "id": 2, "volume_ml": 200, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": {
+          "id": 2,
+          "admission_id": 3,
+          "direction": "out",
+          "category": "urine",
+          "volume_ml": 200,
+          "item": "urine bag: 0 \u2192 200 mL",
+          "notes": null,
+          "source": "manual",
+          "confidence": null,
+          "status": "pending",
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "reviewed_at": null,
+          "has_photo": false,
+          "recorded_ml": 200,
+          "evidence": null,
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "reviewed_by": null,
+          "approved_ml": null,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": null,
+          "urine_rgb": null,
+          "media": null,
+          "levels": {
+            "before": {
+              "id": 1,
+              "volume_ml": 500,
+              "created_at": "2026-11-04T10:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "emptied",
+              "residual_ml": null,
+              "labeled_media": null
+            },
+            "after": {
+              "id": 2,
+              "volume_ml": 200,
+              "created_at": "2026-11-04T11:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "check",
+              "residual_ml": null,
+              "labeled_media": null
+            }
+          },
+          "iddsi_level": null,
+          "drink": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "reading": {
+          "id": 3,
+          "container": "drain_bag",
+          "event": "emptied",
+          "volume_ml": 90,
+          "baseline_ml": 0,
+          "rise_ml": 90,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "entry": { "id": 3, "volume_ml": 90, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": {
+          "id": 3,
+          "admission_id": 9,
+          "direction": "out",
+          "category": "drain",
+          "volume_ml": 90,
+          "item": "drain bag: 0 \u2192 90 mL",
+          "notes": null,
+          "source": "manual",
+          "confidence": null,
+          "status": "pending",
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "reviewed_at": null,
+          "has_photo": false,
+          "recorded_ml": 90,
+          "evidence": null,
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "reviewed_by": null,
+          "approved_ml": null,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": null,
+          "urine_rgb": null,
+          "media": null,
+          "levels": {
+            "before": null,
+            "after": {
+              "id": 3,
+              "volume_ml": 90,
+              "created_at": "2026-11-04T11:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "emptied",
+              "residual_ml": null,
+              "labeled_media": null
+            }
+          },
+          "iddsi_level": null,
+          "drink": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "reading": {
+          "id": 4,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 450,
+          "baseline_ml": 200,
+          "rise_ml": 250,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "recorded_at": "2026-11-04T12:00:00.000Z",
+          "late": false,
+          "entry": { "id": 4, "volume_ml": 250, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        },
+        "entry": {
+          "id": 4,
+          "admission_id": 3,
+          "direction": "out",
+          "category": "urine",
+          "volume_ml": 250,
+          "item": "urine bag: 200 \u2192 450 mL",
+          "notes": null,
+          "source": "manual",
+          "confidence": null,
+          "status": "pending",
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "reviewed_at": null,
+          "has_photo": false,
+          "recorded_ml": 250,
+          "evidence": null,
+          "recorded_at": "2026-11-04T12:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "reviewed_by": null,
+          "approved_ml": null,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": null,
+          "urine_rgb": null,
+          "media": null,
+          "levels": {
+            "before": {
+              "id": 2,
+              "volume_ml": 200,
+              "created_at": "2026-11-04T11:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "check",
+              "residual_ml": null,
+              "labeled_media": null
+            },
+            "after": {
+              "id": 4,
+              "volume_ml": 450,
+              "created_at": "2026-11-04T12:00:00.000Z",
+              "media": null,
+              "evidence": null,
+              "event": "emptied",
+              "residual_ml": null,
+              "labeled_media": null
+            }
+          },
+          "iddsi_level": null,
+          "drink": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "admission_id": 3,
+        "reading": {
+          "id": 1,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 500,
+          "baseline_ml": 0,
+          "rise_ml": 500,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "entry": { "id": 1, "volume_ml": 500, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "admission_id": 3,
+        "reading": {
+          "id": 2,
+          "container": "urine_bag",
+          "event": "check",
+          "volume_ml": 200,
+          "baseline_ml": 0,
+          "rise_ml": 200,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "entry": { "id": 2, "volume_ml": 200, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "admission_id": 3,
+        "reading": {
+          "id": 4,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 450,
+          "baseline_ml": 200,
+          "rise_ml": 250,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "recorded_at": "2026-11-04T12:00:00.000Z",
+          "late": false,
+          "entry": { "id": 4, "volume_ml": 250, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "admission_id": 9,
+        "reading": {
+          "id": 3,
+          "container": "drain_bag",
+          "event": "emptied",
+          "volume_ml": 90,
+          "baseline_ml": 0,
+          "rise_ml": 90,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": null,
+          "source": "manual",
+          "media": null,
+          "proof_media": null,
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T11:00:00.000Z",
+          "recorded_at": "2026-11-04T11:00:00.000Z",
+          "late": false,
+          "entry": { "id": 3, "volume_ml": 90, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        }
+      }
+    },
+    { "v": { "$": "u" } },
+    { "v": { "ok": false, "error": "closed" } },
+    { "v": { "ok": false, "error": "not_found" } },
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T12:00:00.000Z",
+        "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "reading": {
+          "id": 4,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 450,
+          "baseline_ml": 200,
+          "rise_ml": 250,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": 30,
+          "source": "manual",
+          "media": null,
+          "proof_media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T12:00:00.000Z",
+            "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "served_meal": null
+          },
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "recorded_at": "2026-11-04T12:00:00.000Z",
+          "late": false,
+          "entry": { "id": 4, "volume_ml": 250, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        }
+      }
+    },
+    { "v": { "ok": false, "error": "closed" } },
+    {
+      "v": {
+        "admission_id": 3,
+        "reading": {
+          "id": 4,
+          "container": "urine_bag",
+          "event": "emptied",
+          "volume_ml": 450,
+          "baseline_ml": 200,
+          "rise_ml": 250,
+          "fell": false,
+          "fell_from_ml": null,
+          "residual_ml": 30,
+          "source": "manual",
+          "media": null,
+          "proof_media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T12:00:00.000Z",
+            "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "served_meal": null
+          },
+          "evidence": null,
+          "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+          "created_at": "2026-11-04T12:00:00.000Z",
+          "recorded_at": "2026-11-04T12:00:00.000Z",
+          "late": false,
+          "entry": { "id": 4, "volume_ml": 250, "status": "pending" },
+          "confirmed_duplicate_of": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            3,
+            [
+              {
+                "id": 1,
+                "container": "urine_bag",
+                "event": "emptied",
+                "volume_ml": 500,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T10:00:00.000Z",
+                "recorded_at": "2026-11-04T10:00:00.000Z",
+                "late": false,
+                "entry": { "id": 1, "volume_ml": 500, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              },
+              {
+                "id": 2,
+                "container": "urine_bag",
+                "event": "check",
+                "volume_ml": 200,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "recorded_at": "2026-11-04T11:00:00.000Z",
+                "late": false,
+                "entry": { "id": 2, "volume_ml": 200, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              },
+              {
+                "id": 4,
+                "container": "urine_bag",
+                "event": "emptied",
+                "volume_ml": 450,
+                "residual_ml": 30,
+                "source": "manual",
+                "media": null,
+                "proof_media": {
+                  "id": 1,
+                  "kind": "photo",
+                  "mime": "image/jpeg",
+                  "size": 1234,
+                  "duration_ms": null,
+                  "created_at": "2026-11-04T12:00:00.000Z",
+                  "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "served_meal": null
+                },
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T12:00:00.000Z",
+                "recorded_at": "2026-11-04T12:00:00.000Z",
+                "late": false,
+                "entry": { "id": 4, "volume_ml": 250, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ],
+          [
+            9,
+            [
+              {
+                "id": 3,
+                "container": "drain_bag",
+                "event": "emptied",
+                "volume_ml": 90,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "recorded_at": "2026-11-04T11:00:00.000Z",
+                "late": false,
+                "entry": { "id": 3, "volume_ml": 90, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            3,
+            [
+              {
+                "id": 1,
+                "container": "urine_bag",
+                "event": "emptied",
+                "volume_ml": 500,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T10:00:00.000Z",
+                "recorded_at": "2026-11-04T10:00:00.000Z",
+                "late": false,
+                "entry": { "id": 1, "volume_ml": 500, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              },
+              {
+                "id": 2,
+                "container": "urine_bag",
+                "event": "check",
+                "volume_ml": 200,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "recorded_at": "2026-11-04T11:00:00.000Z",
+                "late": false,
+                "entry": { "id": 2, "volume_ml": 200, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              },
+              {
+                "id": 4,
+                "container": "urine_bag",
+                "event": "emptied",
+                "volume_ml": 450,
+                "residual_ml": 30,
+                "source": "manual",
+                "media": null,
+                "proof_media": {
+                  "id": 1,
+                  "kind": "photo",
+                  "mime": "image/jpeg",
+                  "size": 1234,
+                  "duration_ms": null,
+                  "created_at": "2026-11-04T12:00:00.000Z",
+                  "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "served_meal": null
+                },
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T12:00:00.000Z",
+                "recorded_at": "2026-11-04T12:00:00.000Z",
+                "late": false,
+                "entry": { "id": 4, "volume_ml": 250, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            9,
+            [
+              {
+                "id": 3,
+                "container": "drain_bag",
+                "event": "emptied",
+                "volume_ml": 90,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "recorded_at": "2026-11-04T11:00:00.000Z",
+                "late": false,
+                "entry": { "id": 3, "volume_ml": 90, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    { "v": { "$": "map", "v": [] } },
+    { "v": { "$": "map", "v": [] } },
+    { "v": { "$": "map", "v": [] } },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            3,
+            [
+              {
+                "id": 1,
+                "container": "urine_bag",
+                "event": "emptied",
+                "volume_ml": 500,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T10:00:00.000Z",
+                "recorded_at": "2026-11-04T10:00:00.000Z",
+                "late": false,
+                "entry": { "id": 1, "volume_ml": 500, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              },
+              {
+                "id": 2,
+                "container": "urine_bag",
+                "event": "check",
+                "volume_ml": 200,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "recorded_at": "2026-11-04T11:00:00.000Z",
+                "late": false,
+                "entry": { "id": 2, "volume_ml": 200, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              },
+              {
+                "id": 4,
+                "container": "urine_bag",
+                "event": "emptied",
+                "volume_ml": 450,
+                "residual_ml": 30,
+                "source": "manual",
+                "media": null,
+                "proof_media": {
+                  "id": 1,
+                  "kind": "photo",
+                  "mime": "image/jpeg",
+                  "size": 1234,
+                  "duration_ms": null,
+                  "created_at": "2026-11-04T12:00:00.000Z",
+                  "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "served_meal": null
+                },
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T12:00:00.000Z",
+                "recorded_at": "2026-11-04T12:00:00.000Z",
+                "late": false,
+                "entry": { "id": 4, "volume_ml": 250, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ],
+          [
+            9,
+            [
+              {
+                "id": 3,
+                "container": "drain_bag",
+                "event": "emptied",
+                "volume_ml": 90,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "recorded_at": "2026-11-04T11:00:00.000Z",
+                "late": false,
+                "entry": { "id": 3, "volume_ml": 90, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            3,
+            [
+              {
+                "id": 1,
+                "container": "urine_bag",
+                "event": "emptied",
+                "volume_ml": 500,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T10:00:00.000Z",
+                "recorded_at": "2026-11-04T10:00:00.000Z",
+                "late": false,
+                "entry": { "id": 1, "volume_ml": 500, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              },
+              {
+                "id": 2,
+                "container": "urine_bag",
+                "event": "check",
+                "volume_ml": 200,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "recorded_at": "2026-11-04T11:00:00.000Z",
+                "late": false,
+                "entry": { "id": 2, "volume_ml": 200, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              },
+              {
+                "id": 4,
+                "container": "urine_bag",
+                "event": "emptied",
+                "volume_ml": 450,
+                "residual_ml": 30,
+                "source": "manual",
+                "media": null,
+                "proof_media": {
+                  "id": 1,
+                  "kind": "photo",
+                  "mime": "image/jpeg",
+                  "size": 1234,
+                  "duration_ms": null,
+                  "created_at": "2026-11-04T12:00:00.000Z",
+                  "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "served_meal": null
+                },
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T12:00:00.000Z",
+                "recorded_at": "2026-11-04T12:00:00.000Z",
+                "late": false,
+                "entry": { "id": 4, "volume_ml": 250, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            9,
+            [
+              {
+                "id": 3,
+                "container": "drain_bag",
+                "event": "emptied",
+                "volume_ml": 90,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "recorded_at": "2026-11-04T11:00:00.000Z",
+                "late": false,
+                "entry": { "id": 3, "volume_ml": 90, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    { "v": { "$": "map", "v": [] } },
+    { "v": { "$": "map", "v": [] } },
+    { "v": { "$": "map", "v": [] } },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            9,
+            [
+              {
+                "id": 3,
+                "container": "drain_bag",
+                "event": "emptied",
+                "volume_ml": 90,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "recorded_at": "2026-11-04T11:00:00.000Z",
+                "late": false,
+                "entry": { "id": 3, "volume_ml": 90, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ],
+          [
+            3,
+            [
+              {
+                "id": 4,
+                "container": "urine_bag",
+                "event": "emptied",
+                "volume_ml": 450,
+                "residual_ml": 30,
+                "source": "manual",
+                "media": null,
+                "proof_media": {
+                  "id": 1,
+                  "kind": "photo",
+                  "mime": "image/jpeg",
+                  "size": 1234,
+                  "duration_ms": null,
+                  "created_at": "2026-11-04T12:00:00.000Z",
+                  "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "served_meal": null
+                },
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T12:00:00.000Z",
+                "recorded_at": "2026-11-04T12:00:00.000Z",
+                "late": false,
+                "entry": { "id": 4, "volume_ml": 250, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            3,
+            [
+              {
+                "id": 4,
+                "container": "urine_bag",
+                "event": "emptied",
+                "volume_ml": 450,
+                "residual_ml": 30,
+                "source": "manual",
+                "media": null,
+                "proof_media": {
+                  "id": 1,
+                  "kind": "photo",
+                  "mime": "image/jpeg",
+                  "size": 1234,
+                  "duration_ms": null,
+                  "created_at": "2026-11-04T12:00:00.000Z",
+                  "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "served_meal": null
+                },
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T12:00:00.000Z",
+                "recorded_at": "2026-11-04T12:00:00.000Z",
+                "late": false,
+                "entry": { "id": 4, "volume_ml": 250, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            9,
+            [
+              {
+                "id": 3,
+                "container": "drain_bag",
+                "event": "emptied",
+                "volume_ml": 90,
+                "residual_ml": null,
+                "source": "manual",
+                "media": null,
+                "proof_media": null,
+                "evidence": null,
+                "created_by": { "id": 1, "name": "Ravi Kumar", "role": "attendant" },
+                "created_at": "2026-11-04T11:00:00.000Z",
+                "recorded_at": "2026-11-04T11:00:00.000Z",
+                "late": false,
+                "entry": { "id": 3, "volume_ml": 90, "status": "pending" },
+                "confirmed_duplicate_of": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    { "v": { "$": "map", "v": [] } },
+    { "v": { "$": "map", "v": [] } },
+    { "v": { "$": "map", "v": [] } }
+  ],
+  []
+]

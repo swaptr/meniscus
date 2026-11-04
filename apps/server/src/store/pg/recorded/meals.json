@@ -1,0 +1,1634 @@
+[
+  [
+    {
+      "v": {
+        "id": 1,
+        "admission_id": 1,
+        "meal": "breakfast",
+        "portion": 50,
+        "items": null,
+        "fluid_ml": null,
+        "source": "manual",
+        "confidence": null,
+        "evidence": null,
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "recorded_at": "2026-11-04T10:00:00.000Z",
+        "late": false,
+        "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "entry_id": null,
+        "entry_status": null,
+        "voided_at": null,
+        "voided_by": null,
+        "void_reason": null,
+        "media": null,
+        "dishes": [],
+        "proof": null,
+        "served_media": null,
+        "amendments": [],
+        "amended_at": null,
+        "labeled_media": null
+      }
+    },
+    {
+      "v": {
+        "id": 2,
+        "admission_id": 1,
+        "meal": "lunch",
+        "portion": 100,
+        "items": "soup, roti",
+        "fluid_ml": 200,
+        "source": "manual",
+        "confidence": null,
+        "evidence": null,
+        "created_at": "2026-11-04T08:00:00.000Z",
+        "recorded_at": "2026-11-04T10:00:00.000Z",
+        "late": true,
+        "created_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+        "entry_id": 1,
+        "entry_status": "pending",
+        "voided_at": null,
+        "voided_by": null,
+        "void_reason": null,
+        "media": null,
+        "dishes": [],
+        "proof": null,
+        "served_media": null,
+        "amendments": [],
+        "amended_at": null,
+        "labeled_media": null
+      }
+    },
+    {
+      "v": {
+        "id": 3,
+        "admission_id": 2,
+        "meal": "snack",
+        "portion": 25,
+        "items": null,
+        "fluid_ml": null,
+        "source": "manual",
+        "confidence": null,
+        "evidence": null,
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "recorded_at": "2026-11-04T10:00:00.000Z",
+        "late": false,
+        "created_by": null,
+        "entry_id": null,
+        "entry_status": null,
+        "voided_at": null,
+        "voided_by": null,
+        "void_reason": null,
+        "media": null,
+        "dishes": [],
+        "proof": null,
+        "served_media": null,
+        "amendments": [],
+        "amended_at": null,
+        "labeled_media": null
+      }
+    },
+    { "v": { "$": "u" } },
+    {
+      "v": [
+        {
+          "id": 1,
+          "admission_id": 1,
+          "meal": "breakfast",
+          "portion": 50,
+          "items": null,
+          "fluid_ml": null,
+          "source": "manual",
+          "confidence": null,
+          "evidence": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": null,
+          "entry_status": null,
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": null,
+          "dishes": [],
+          "proof": null,
+          "served_media": null,
+          "amendments": [],
+          "amended_at": null,
+          "labeled_media": null
+        },
+        {
+          "id": 2,
+          "admission_id": 1,
+          "meal": "lunch",
+          "portion": 100,
+          "items": "soup, roti",
+          "fluid_ml": 200,
+          "source": "manual",
+          "confidence": null,
+          "evidence": null,
+          "created_at": "2026-11-04T08:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": true,
+          "created_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "entry_id": 1,
+          "entry_status": "pending",
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": null,
+          "dishes": [],
+          "proof": null,
+          "served_media": null,
+          "amendments": [],
+          "amended_at": null,
+          "labeled_media": null
+        }
+      ]
+    },
+    {
+      "v": [
+        {
+          "id": 1,
+          "admission_id": 1,
+          "meal": "breakfast",
+          "portion": 50,
+          "items": null,
+          "fluid_ml": null,
+          "source": "manual",
+          "confidence": null,
+          "evidence": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": null,
+          "entry_status": null,
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": null,
+          "dishes": [],
+          "proof": null,
+          "served_media": null,
+          "amendments": [],
+          "amended_at": null,
+          "labeled_media": null
+        },
+        {
+          "id": 2,
+          "admission_id": 1,
+          "meal": "lunch",
+          "portion": 100,
+          "items": "soup, roti",
+          "fluid_ml": 200,
+          "source": "manual",
+          "confidence": null,
+          "evidence": null,
+          "created_at": "2026-11-04T08:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": true,
+          "created_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "entry_id": 1,
+          "entry_status": "pending",
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": null,
+          "dishes": [],
+          "proof": null,
+          "served_media": null,
+          "amendments": [],
+          "amended_at": null,
+          "labeled_media": null
+        }
+      ]
+    },
+    {
+      "v": {
+        "id": 2,
+        "admission_id": 1,
+        "meal": "lunch",
+        "portion": 100,
+        "items": "soup, roti",
+        "fluid_ml": 200,
+        "source": "manual",
+        "confidence": null,
+        "evidence": null,
+        "created_at": "2026-11-04T08:00:00.000Z",
+        "recorded_at": "2026-11-04T10:00:00.000Z",
+        "late": true,
+        "created_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+        "entry_id": 1,
+        "entry_status": "pending",
+        "voided_at": null,
+        "voided_by": null,
+        "void_reason": null,
+        "media": null,
+        "dishes": [],
+        "proof": null,
+        "served_media": null,
+        "amendments": [],
+        "amended_at": null,
+        "labeled_media": null
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            2,
+            [
+              {
+                "id": 3,
+                "admission_id": 2,
+                "meal": "snack",
+                "portion": 25,
+                "items": null,
+                "fluid_ml": null,
+                "source": "manual",
+                "confidence": null,
+                "evidence": null,
+                "created_at": "2026-11-04T10:00:00.000Z",
+                "recorded_at": "2026-11-04T10:00:00.000Z",
+                "late": false,
+                "created_by": null,
+                "entry_id": null,
+                "entry_status": null,
+                "voided_at": null,
+                "voided_by": null,
+                "void_reason": null,
+                "media": null,
+                "dishes": [],
+                "proof": null,
+                "served_media": null,
+                "amendments": [],
+                "amended_at": null,
+                "labeled_media": null
+              }
+            ]
+          ],
+          [
+            1,
+            [
+              {
+                "id": 1,
+                "admission_id": 1,
+                "meal": "breakfast",
+                "portion": 50,
+                "items": null,
+                "fluid_ml": null,
+                "source": "manual",
+                "confidence": null,
+                "evidence": null,
+                "created_at": "2026-11-04T10:00:00.000Z",
+                "recorded_at": "2026-11-04T10:00:00.000Z",
+                "late": false,
+                "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+                "entry_id": null,
+                "entry_status": null,
+                "voided_at": null,
+                "voided_by": null,
+                "void_reason": null,
+                "media": null,
+                "dishes": [],
+                "proof": null,
+                "served_media": null,
+                "amendments": [],
+                "amended_at": null,
+                "labeled_media": null
+              },
+              {
+                "id": 2,
+                "admission_id": 1,
+                "meal": "lunch",
+                "portion": 100,
+                "items": "soup, roti",
+                "fluid_ml": 200,
+                "source": "manual",
+                "confidence": null,
+                "evidence": null,
+                "created_at": "2026-11-04T08:00:00.000Z",
+                "recorded_at": "2026-11-04T10:00:00.000Z",
+                "late": true,
+                "created_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+                "entry_id": 1,
+                "entry_status": "pending",
+                "voided_at": null,
+                "voided_by": null,
+                "void_reason": null,
+                "media": null,
+                "dishes": [],
+                "proof": null,
+                "served_media": null,
+                "amendments": [],
+                "amended_at": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            2,
+            [
+              {
+                "id": 3,
+                "admission_id": 2,
+                "meal": "snack",
+                "portion": 25,
+                "items": null,
+                "fluid_ml": null,
+                "source": "manual",
+                "confidence": null,
+                "evidence": null,
+                "created_at": "2026-11-04T10:00:00.000Z",
+                "recorded_at": "2026-11-04T10:00:00.000Z",
+                "late": false,
+                "created_by": null,
+                "entry_id": null,
+                "entry_status": null,
+                "voided_at": null,
+                "voided_by": null,
+                "void_reason": null,
+                "media": null,
+                "dishes": [],
+                "proof": null,
+                "served_media": null,
+                "amendments": [],
+                "amended_at": null,
+                "labeled_media": null
+              }
+            ]
+          ],
+          [
+            1,
+            [
+              {
+                "id": 1,
+                "admission_id": 1,
+                "meal": "breakfast",
+                "portion": 50,
+                "items": null,
+                "fluid_ml": null,
+                "source": "manual",
+                "confidence": null,
+                "evidence": null,
+                "created_at": "2026-11-04T10:00:00.000Z",
+                "recorded_at": "2026-11-04T10:00:00.000Z",
+                "late": false,
+                "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+                "entry_id": null,
+                "entry_status": null,
+                "voided_at": null,
+                "voided_by": null,
+                "void_reason": null,
+                "media": null,
+                "dishes": [],
+                "proof": null,
+                "served_media": null,
+                "amendments": [],
+                "amended_at": null,
+                "labeled_media": null
+              },
+              {
+                "id": 2,
+                "admission_id": 1,
+                "meal": "lunch",
+                "portion": 100,
+                "items": "soup, roti",
+                "fluid_ml": 200,
+                "source": "manual",
+                "confidence": null,
+                "evidence": null,
+                "created_at": "2026-11-04T08:00:00.000Z",
+                "recorded_at": "2026-11-04T10:00:00.000Z",
+                "late": true,
+                "created_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+                "entry_id": 1,
+                "entry_status": "pending",
+                "voided_at": null,
+                "voided_by": null,
+                "void_reason": null,
+                "media": null,
+                "dishes": [],
+                "proof": null,
+                "served_media": null,
+                "amendments": [],
+                "amended_at": null,
+                "labeled_media": null
+              }
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "v": [
+        {
+          "kind": "recorded",
+          "at": "2026-11-04T10:00:00.000Z",
+          "by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "from_ml": null,
+          "to_ml": 200,
+          "from_category": null,
+          "to_category": "food",
+          "reason": null,
+          "note": null,
+          "from_colour": null,
+          "to_colour": null,
+          "from_iddsi": null,
+          "to_iddsi": null,
+          "from_drink": null,
+          "to_drink": null,
+          "from_item": null,
+          "to_item": null
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": "lunch"
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": "lunch"
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "served_meal": "lunch"
+      }
+    },
+    {
+      "v": {
+        "id": 2,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T10:30:00.000Z",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "served_meal": null
+      }
+    },
+    { "v": 1 },
+    {
+      "v": {
+        "id": 1,
+        "admission_id": 3,
+        "meal": "lunch",
+        "portion": 75,
+        "items": "dal, rice",
+        "fluid_ml": 150,
+        "source": "photo",
+        "confidence": 0.72,
+        "evidence": {
+          "mode": "spark",
+          "image_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "reading": { "meal": "lunch", "portion": 75, "items": "dal, rice", "confidence": 0.72, "fluid_ml": 150 },
+          "segmentation": null,
+          "comparison": null,
+          "warnings": ["a note"],
+          "trace": [{ "model": "muse-spark", "ms": 812, "status": 200 }]
+        },
+        "created_at": "2026-11-04T10:40:00.000Z",
+        "recorded_at": "2026-11-04T10:40:00.000Z",
+        "late": false,
+        "created_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+        "entry_id": 1,
+        "entry_status": "pending",
+        "voided_at": null,
+        "voided_by": null,
+        "void_reason": null,
+        "media": {
+          "id": 2,
+          "kind": "photo",
+          "mime": "image/jpeg",
+          "size": 1234,
+          "duration_ms": null,
+          "created_at": "2026-11-04T10:30:00.000Z",
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "served_meal": null
+        },
+        "dishes": [
+          { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+          { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+        ],
+        "proof": {
+          "photo": {
+            "media_id": 2,
+            "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "captured_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+            "captured_at": "2026-11-04T10:30:00.000Z"
+          },
+          "served": {
+            "media_id": 1,
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "captured_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+            "captured_at": "2026-11-04T10:00:00.000Z"
+          },
+          "confirmed": {
+            "portion": 75,
+            "items": "dal, rice",
+            "fluid_ml": 150,
+            "dishes": [
+              { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+              { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+            ]
+          },
+          "confirmed_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+          "confirmed_at": "2026-11-04T10:40:00.000Z"
+        },
+        "served_media": {
+          "id": 1,
+          "kind": "photo",
+          "mime": "image/jpeg",
+          "size": 1234,
+          "duration_ms": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "served_meal": "lunch"
+        },
+        "amendments": [],
+        "amended_at": null,
+        "labeled_media": null
+      }
+    },
+    { "v": { "$": "u" } },
+    {
+      "v": {
+        "id": 3,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T10:40:00.000Z",
+        "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "served_meal": null
+      }
+    },
+    { "e": { "name": "ServedTaken", "message": "served photo already linked" } },
+    { "e": { "name": "ReadLinkTaken", "message": "already linked" } },
+    {
+      "v": [
+        {
+          "id": 1,
+          "admission_id": 3,
+          "meal": "lunch",
+          "portion": 75,
+          "items": "dal, rice",
+          "fluid_ml": 150,
+          "source": "photo",
+          "confidence": 0.72,
+          "evidence": {
+            "mode": "spark",
+            "image_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "reading": { "meal": "lunch", "portion": 75, "items": "dal, rice", "confidence": 0.72, "fluid_ml": 150 },
+            "segmentation": null,
+            "comparison": null,
+            "warnings": ["a note"],
+            "trace": [{ "model": "muse-spark", "ms": 812, "status": 200 }]
+          },
+          "created_at": "2026-11-04T10:40:00.000Z",
+          "recorded_at": "2026-11-04T10:40:00.000Z",
+          "late": false,
+          "created_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+          "entry_id": 1,
+          "entry_status": "pending",
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": {
+            "id": 2,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T10:30:00.000Z",
+            "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "served_meal": null
+          },
+          "dishes": [
+            { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+            { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+          ],
+          "proof": {
+            "photo": {
+              "media_id": 2,
+              "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "captured_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "captured_at": "2026-11-04T10:30:00.000Z"
+            },
+            "served": {
+              "media_id": 1,
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "captured_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+              "captured_at": "2026-11-04T10:00:00.000Z"
+            },
+            "confirmed": {
+              "portion": 75,
+              "items": "dal, rice",
+              "fluid_ml": 150,
+              "dishes": [
+                { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+              ]
+            },
+            "confirmed_by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+            "confirmed_at": "2026-11-04T10:40:00.000Z"
+          },
+          "served_media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T10:00:00.000Z",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "served_meal": "lunch"
+          },
+          "amendments": [],
+          "amended_at": null,
+          "labeled_media": null
+        }
+      ]
+    },
+    {
+      "v": {
+        "id": 4,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T10:40:00.000Z",
+        "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "served_meal": "dinner"
+      }
+    },
+    {
+      "v": {
+        "id": 4,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T10:40:00.000Z",
+        "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "served_meal": "dinner"
+      }
+    },
+    { "v": { "$": "u" } }
+  ],
+  [
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "admission_id": 1,
+        "meal": "dinner",
+        "portion": 50,
+        "items": null,
+        "fluid_ml": null,
+        "source": "photo",
+        "confidence": null,
+        "evidence": {
+          "mode": "spark",
+          "image_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "reading": { "meal": "lunch", "portion": 75, "items": "dal, rice", "confidence": 0.72, "fluid_ml": 150 },
+          "segmentation": null,
+          "comparison": null,
+          "warnings": ["a note"],
+          "trace": [{ "model": "muse-spark", "ms": 812, "status": 200 }]
+        },
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "recorded_at": "2026-11-04T10:00:00.000Z",
+        "late": false,
+        "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "entry_id": null,
+        "entry_status": null,
+        "voided_at": null,
+        "voided_by": null,
+        "void_reason": null,
+        "media": {
+          "id": 1,
+          "kind": "photo",
+          "mime": "image/jpeg",
+          "size": 1234,
+          "duration_ms": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "served_meal": null
+        },
+        "dishes": [
+          { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+          { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+        ],
+        "proof": {
+          "photo": {
+            "media_id": 1,
+            "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "captured_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+            "captured_at": "2026-11-04T10:00:00.000Z"
+          },
+          "served": null,
+          "confirmed": {
+            "portion": 50,
+            "items": null,
+            "fluid_ml": null,
+            "dishes": [
+              { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+              { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+            ]
+          },
+          "confirmed_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "confirmed_at": "2026-11-04T10:00:00.000Z"
+        },
+        "served_media": null,
+        "amendments": [],
+        "amended_at": null,
+        "labeled_media": null
+      }
+    },
+    {
+      "v": {
+        "id": 2,
+        "admission_id": 1,
+        "meal": "snack",
+        "portion": 25,
+        "items": "fruit",
+        "fluid_ml": null,
+        "source": "manual",
+        "confidence": null,
+        "evidence": null,
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "recorded_at": "2026-11-04T10:00:00.000Z",
+        "late": false,
+        "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "entry_id": null,
+        "entry_status": null,
+        "voided_at": null,
+        "voided_by": null,
+        "void_reason": null,
+        "media": null,
+        "dishes": [],
+        "proof": null,
+        "served_media": null,
+        "amendments": [],
+        "amended_at": null,
+        "labeled_media": null
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "meal": {
+          "id": 1,
+          "admission_id": 1,
+          "meal": "dinner",
+          "portion": 75,
+          "items": null,
+          "fluid_ml": null,
+          "source": "photo",
+          "confidence": null,
+          "evidence": {
+            "mode": "spark",
+            "image_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "reading": { "meal": "lunch", "portion": 75, "items": "dal, rice", "confidence": 0.72, "fluid_ml": 150 },
+            "segmentation": null,
+            "comparison": null,
+            "warnings": ["a note"],
+            "trace": [{ "model": "muse-spark", "ms": 812, "status": 200 }]
+          },
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": null,
+          "entry_status": null,
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T10:00:00.000Z",
+            "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "served_meal": null
+          },
+          "dishes": [
+            { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+            { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+          ],
+          "proof": {
+            "photo": {
+              "media_id": 1,
+              "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+              "captured_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "captured_at": "2026-11-04T10:00:00.000Z"
+            },
+            "served": null,
+            "confirmed": {
+              "portion": 50,
+              "items": null,
+              "fluid_ml": null,
+              "dishes": [
+                { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+              ]
+            },
+            "confirmed_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+            "confirmed_at": "2026-11-04T10:00:00.000Z"
+          },
+          "served_media": null,
+          "amendments": [
+            {
+              "id": 1,
+              "at": "2026-11-04T10:01:00.000Z",
+              "by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+              "reason": "second look",
+              "before": {
+                "portion": 50,
+                "items": null,
+                "dishes": [
+                  { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                  { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+                ]
+              },
+              "after": {
+                "portion": 75,
+                "dishes": [
+                  { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                  { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+                ],
+                "items": null
+              }
+            }
+          ],
+          "amended_at": "2026-11-04T10:01:00.000Z",
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "meal": {
+          "id": 1,
+          "admission_id": 1,
+          "meal": "dinner",
+          "portion": 75,
+          "items": "rice, dal",
+          "fluid_ml": null,
+          "source": "photo",
+          "confidence": null,
+          "evidence": {
+            "mode": "spark",
+            "image_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "reading": { "meal": "lunch", "portion": 75, "items": "dal, rice", "confidence": 0.72, "fluid_ml": 150 },
+            "segmentation": null,
+            "comparison": null,
+            "warnings": ["a note"],
+            "trace": [{ "model": "muse-spark", "ms": 812, "status": 200 }]
+          },
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": null,
+          "entry_status": null,
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T10:00:00.000Z",
+            "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "served_meal": null
+          },
+          "dishes": [
+            { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 100 },
+            { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 }
+          ],
+          "proof": {
+            "photo": {
+              "media_id": 1,
+              "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+              "captured_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "captured_at": "2026-11-04T10:00:00.000Z"
+            },
+            "served": null,
+            "confirmed": {
+              "portion": 50,
+              "items": null,
+              "fluid_ml": null,
+              "dishes": [
+                { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+              ]
+            },
+            "confirmed_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+            "confirmed_at": "2026-11-04T10:00:00.000Z"
+          },
+          "served_media": null,
+          "amendments": [
+            {
+              "id": 1,
+              "at": "2026-11-04T10:01:00.000Z",
+              "by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+              "reason": "second look",
+              "before": {
+                "portion": 50,
+                "items": null,
+                "dishes": [
+                  { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                  { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+                ]
+              },
+              "after": {
+                "portion": 75,
+                "dishes": [
+                  { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                  { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+                ],
+                "items": null
+              }
+            },
+            {
+              "id": 2,
+              "at": "2026-11-04T10:02:00.000Z",
+              "by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+              "reason": "reordered",
+              "before": {
+                "portion": 75,
+                "items": null,
+                "dishes": [
+                  { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                  { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+                ]
+              },
+              "after": {
+                "portion": 75,
+                "dishes": [
+                  { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 100 },
+                  { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 }
+                ],
+                "items": "rice, dal"
+              }
+            }
+          ],
+          "amended_at": "2026-11-04T10:02:00.000Z",
+          "labeled_media": null
+        }
+      }
+    },
+    { "v": { "ok": false, "error": "invalid", "path": "items", "message": "a meal with dishes takes its items from them" } },
+    { "v": { "ok": false, "error": "invalid", "path": "reason", "message": "the amendment changes nothing" } },
+    {
+      "v": {
+        "ok": true,
+        "meal": {
+          "id": 2,
+          "admission_id": 1,
+          "meal": "snack",
+          "portion": 25,
+          "items": "apple",
+          "fluid_ml": null,
+          "source": "manual",
+          "confidence": null,
+          "evidence": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": null,
+          "entry_status": null,
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": null,
+          "dishes": [],
+          "proof": null,
+          "served_media": null,
+          "amendments": [
+            {
+              "id": 3,
+              "at": "2026-11-04T10:05:00.000Z",
+              "by": null,
+              "reason": "typo",
+              "before": { "portion": 25, "items": "fruit", "dishes": [] },
+              "after": { "portion": 25, "dishes": [], "items": "apple" }
+            }
+          ],
+          "amended_at": "2026-11-04T10:05:00.000Z",
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "meal": {
+          "id": 2,
+          "admission_id": 1,
+          "meal": "snack",
+          "portion": 25,
+          "items": null,
+          "fluid_ml": null,
+          "source": "manual",
+          "confidence": null,
+          "evidence": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": null,
+          "entry_status": null,
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": null,
+          "dishes": [],
+          "proof": null,
+          "served_media": null,
+          "amendments": [
+            {
+              "id": 3,
+              "at": "2026-11-04T10:05:00.000Z",
+              "by": null,
+              "reason": "typo",
+              "before": { "portion": 25, "items": "fruit", "dishes": [] },
+              "after": { "portion": 25, "dishes": [], "items": "apple" }
+            },
+            {
+              "id": 4,
+              "at": "2026-11-04T10:06:00.000Z",
+              "by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "reason": "cleared",
+              "before": { "portion": 25, "items": "apple", "dishes": [] },
+              "after": { "portion": 25, "dishes": [], "items": null }
+            }
+          ],
+          "amended_at": "2026-11-04T10:06:00.000Z",
+          "labeled_media": null
+        }
+      }
+    },
+    { "v": { "ok": false, "error": "not_found" } },
+    {
+      "v": [
+        {
+          "id": 2,
+          "admission_id": 1,
+          "meal": "snack",
+          "portion": 25,
+          "items": null,
+          "fluid_ml": null,
+          "source": "manual",
+          "confidence": null,
+          "evidence": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": null,
+          "entry_status": null,
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": null,
+          "dishes": [],
+          "proof": null,
+          "served_media": null,
+          "amendments": [
+            {
+              "id": 3,
+              "at": "2026-11-04T10:05:00.000Z",
+              "by": null,
+              "reason": "typo",
+              "before": { "portion": 25, "items": "fruit", "dishes": [] },
+              "after": { "portion": 25, "dishes": [], "items": "apple" }
+            },
+            {
+              "id": 4,
+              "at": "2026-11-04T10:06:00.000Z",
+              "by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "reason": "cleared",
+              "before": { "portion": 25, "items": "apple", "dishes": [] },
+              "after": { "portion": 25, "dishes": [], "items": null }
+            }
+          ],
+          "amended_at": "2026-11-04T10:06:00.000Z",
+          "labeled_media": null
+        },
+        {
+          "id": 1,
+          "admission_id": 1,
+          "meal": "dinner",
+          "portion": 75,
+          "items": "rice, dal",
+          "fluid_ml": null,
+          "source": "photo",
+          "confidence": null,
+          "evidence": {
+            "mode": "spark",
+            "image_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "reading": { "meal": "lunch", "portion": 75, "items": "dal, rice", "confidence": 0.72, "fluid_ml": 150 },
+            "segmentation": null,
+            "comparison": null,
+            "warnings": ["a note"],
+            "trace": [{ "model": "muse-spark", "ms": 812, "status": 200 }]
+          },
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": null,
+          "entry_status": null,
+          "voided_at": null,
+          "voided_by": null,
+          "void_reason": null,
+          "media": {
+            "id": 1,
+            "kind": "photo",
+            "mime": "image/jpeg",
+            "size": 1234,
+            "duration_ms": null,
+            "created_at": "2026-11-04T10:00:00.000Z",
+            "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "served_meal": null
+          },
+          "dishes": [
+            { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 100 },
+            { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 }
+          ],
+          "proof": {
+            "photo": {
+              "media_id": 1,
+              "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+              "captured_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "captured_at": "2026-11-04T10:00:00.000Z"
+            },
+            "served": null,
+            "confirmed": {
+              "portion": 50,
+              "items": null,
+              "fluid_ml": null,
+              "dishes": [
+                { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+              ]
+            },
+            "confirmed_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+            "confirmed_at": "2026-11-04T10:00:00.000Z"
+          },
+          "served_media": null,
+          "amendments": [
+            {
+              "id": 1,
+              "at": "2026-11-04T10:01:00.000Z",
+              "by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+              "reason": "second look",
+              "before": {
+                "portion": 50,
+                "items": null,
+                "dishes": [
+                  { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                  { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+                ]
+              },
+              "after": {
+                "portion": 75,
+                "dishes": [
+                  { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                  { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+                ],
+                "items": null
+              }
+            },
+            {
+              "id": 2,
+              "at": "2026-11-04T10:02:00.000Z",
+              "by": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+              "reason": "reordered",
+              "before": {
+                "portion": 75,
+                "items": null,
+                "dishes": [
+                  { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 },
+                  { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 50 }
+                ]
+              },
+              "after": {
+                "portion": 75,
+                "dishes": [
+                  { "index": 2, "name": "rice", "dish_kind": "rice", "portion": 100 },
+                  { "index": 1, "name": "dal", "dish_kind": "curry", "portion": 75 }
+                ],
+                "items": "rice, dal"
+              }
+            }
+          ],
+          "amended_at": "2026-11-04T10:02:00.000Z",
+          "labeled_media": null
+        }
+      ]
+    },
+    {
+      "v": {
+        "ok": true,
+        "meal": {
+          "id": 2,
+          "admission_id": 1,
+          "meal": "snack",
+          "portion": 25,
+          "items": null,
+          "fluid_ml": null,
+          "source": "manual",
+          "confidence": null,
+          "evidence": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": null,
+          "entry_status": null,
+          "voided_at": "2026-11-04T10:07:00.000Z",
+          "voided_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "void_reason": "wrong bed",
+          "media": null,
+          "dishes": [],
+          "proof": null,
+          "served_media": null,
+          "amendments": [
+            {
+              "id": 3,
+              "at": "2026-11-04T10:05:00.000Z",
+              "by": null,
+              "reason": "typo",
+              "before": { "portion": 25, "items": "fruit", "dishes": [] },
+              "after": { "portion": 25, "dishes": [], "items": "apple" }
+            },
+            {
+              "id": 4,
+              "at": "2026-11-04T10:06:00.000Z",
+              "by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "reason": "cleared",
+              "before": { "portion": 25, "items": "apple", "dishes": [] },
+              "after": { "portion": 25, "dishes": [], "items": null }
+            }
+          ],
+          "amended_at": "2026-11-04T10:06:00.000Z",
+          "labeled_media": null
+        }
+      }
+    },
+    { "v": { "ok": false, "error": "voided" } }
+  ],
+  [
+    {
+      "v": {
+        "id": 1,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "served_meal": "breakfast"
+      }
+    },
+    {
+      "v": {
+        "id": 2,
+        "kind": "photo",
+        "mime": "image/jpeg",
+        "size": 1234,
+        "duration_ms": null,
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "served_meal": null
+      }
+    },
+    {
+      "v": {
+        "id": 1,
+        "admission_id": 2,
+        "meal": "breakfast",
+        "portion": 25,
+        "items": null,
+        "fluid_ml": 120,
+        "source": "photo",
+        "confidence": null,
+        "evidence": {
+          "mode": "spark",
+          "image_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "reading": { "meal": "lunch", "portion": 75, "items": "dal, rice", "confidence": 0.72, "fluid_ml": 150 },
+          "segmentation": null,
+          "comparison": null,
+          "warnings": ["a note"],
+          "trace": [{ "model": "muse-spark", "ms": 812, "status": 200 }]
+        },
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "recorded_at": "2026-11-04T10:00:00.000Z",
+        "late": false,
+        "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "entry_id": 1,
+        "entry_status": "pending",
+        "voided_at": null,
+        "voided_by": null,
+        "void_reason": null,
+        "media": {
+          "id": 2,
+          "kind": "photo",
+          "mime": "image/jpeg",
+          "size": 1234,
+          "duration_ms": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "served_meal": null
+        },
+        "dishes": [],
+        "proof": {
+          "photo": {
+            "media_id": 2,
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "captured_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+            "captured_at": "2026-11-04T10:00:00.000Z"
+          },
+          "served": {
+            "media_id": 1,
+            "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "captured_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+            "captured_at": "2026-11-04T10:00:00.000Z"
+          },
+          "confirmed": { "portion": 25, "items": null, "fluid_ml": 120, "dishes": [] },
+          "confirmed_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "confirmed_at": "2026-11-04T10:00:00.000Z"
+        },
+        "served_media": {
+          "id": 1,
+          "kind": "photo",
+          "mime": "image/jpeg",
+          "size": 1234,
+          "duration_ms": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+          "served_meal": "breakfast"
+        },
+        "amendments": [],
+        "amended_at": null,
+        "labeled_media": null
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "meal": {
+          "id": 1,
+          "admission_id": 2,
+          "meal": "breakfast",
+          "portion": 25,
+          "items": null,
+          "fluid_ml": 120,
+          "source": "photo",
+          "confidence": null,
+          "evidence": {
+            "mode": "spark",
+            "image_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "reading": { "meal": "lunch", "portion": 75, "items": "dal, rice", "confidence": 0.72, "fluid_ml": 150 },
+            "segmentation": null,
+            "comparison": null,
+            "warnings": ["a note"],
+            "trace": [{ "model": "muse-spark", "ms": 812, "status": 200 }]
+          },
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": 1,
+          "entry_status": "rejected",
+          "voided_at": "2026-11-04T11:00:00.000Z",
+          "voided_by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "void_reason": "duplicate",
+          "media": null,
+          "dishes": [],
+          "proof": {
+            "photo": {
+              "media_id": 2,
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "captured_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "captured_at": "2026-11-04T10:00:00.000Z"
+            },
+            "served": {
+              "media_id": 1,
+              "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+              "captured_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+              "captured_at": "2026-11-04T10:00:00.000Z"
+            },
+            "confirmed": { "portion": 25, "items": null, "fluid_ml": 120, "dishes": [] },
+            "confirmed_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+            "confirmed_at": "2026-11-04T10:00:00.000Z"
+          },
+          "served_media": null,
+          "amendments": [],
+          "amended_at": null,
+          "labeled_media": null
+        }
+      }
+    },
+    { "v": { "ok": false, "error": "already_voided" } },
+    { "v": { "ok": false, "error": "not_found" } },
+    { "v": { "$": "u" } },
+    { "v": { "$": "u" } },
+    {
+      "v": [
+        {
+          "kind": "recorded",
+          "at": "2026-11-04T10:00:00.000Z",
+          "by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "from_ml": null,
+          "to_ml": 120,
+          "from_category": null,
+          "to_category": "food",
+          "reason": null,
+          "note": null,
+          "from_colour": null,
+          "to_colour": null,
+          "from_iddsi": null,
+          "to_iddsi": null,
+          "from_drink": null,
+          "to_drink": null,
+          "from_item": null,
+          "to_item": null
+        },
+        {
+          "kind": "rejected",
+          "at": "2026-11-04T11:00:00.000Z",
+          "by": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+          "from_ml": null,
+          "to_ml": null,
+          "from_category": null,
+          "to_category": null,
+          "reason": "other",
+          "note": "duplicate",
+          "from_colour": null,
+          "to_colour": null,
+          "from_iddsi": null,
+          "to_iddsi": null,
+          "from_drink": null,
+          "to_drink": null,
+          "from_item": null,
+          "to_item": null
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "v": {
+        "id": 1,
+        "admission_id": 1,
+        "meal": "lunch",
+        "portion": 100,
+        "items": null,
+        "fluid_ml": 250,
+        "source": "manual",
+        "confidence": null,
+        "evidence": null,
+        "created_at": "2026-11-04T10:00:00.000Z",
+        "recorded_at": "2026-11-04T10:00:00.000Z",
+        "late": false,
+        "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "entry_id": 1,
+        "entry_status": "pending",
+        "voided_at": null,
+        "voided_by": null,
+        "void_reason": null,
+        "media": null,
+        "dishes": [],
+        "proof": null,
+        "served_media": null,
+        "amendments": [],
+        "amended_at": null,
+        "labeled_media": null
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "entry": {
+          "id": 1,
+          "admission_id": 1,
+          "direction": "in",
+          "category": "food",
+          "volume_ml": 250,
+          "item": "Lunch",
+          "notes": null,
+          "source": "manual",
+          "confidence": null,
+          "status": "approved",
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "reviewed_at": "2026-11-04T10:00:00.000Z",
+          "has_photo": false,
+          "recorded_ml": 250,
+          "evidence": null,
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "reviewed_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "approved_ml": 250,
+          "amended_at": null,
+          "reject_reason": null,
+          "urine_colour": null,
+          "urine_rgb": null,
+          "media": null,
+          "levels": null,
+          "iddsi_level": null,
+          "drink": null,
+          "labeled_media": null
+        }
+      }
+    },
+    {
+      "v": {
+        "ok": true,
+        "meal": {
+          "id": 1,
+          "admission_id": 1,
+          "meal": "lunch",
+          "portion": 100,
+          "items": null,
+          "fluid_ml": 250,
+          "source": "manual",
+          "confidence": null,
+          "evidence": null,
+          "created_at": "2026-11-04T10:00:00.000Z",
+          "recorded_at": "2026-11-04T10:00:00.000Z",
+          "late": false,
+          "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "entry_id": 1,
+          "entry_status": "approved",
+          "voided_at": "2026-11-04T10:00:00.000Z",
+          "voided_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+          "void_reason": "wrong meal",
+          "media": null,
+          "dishes": [],
+          "proof": null,
+          "served_media": null,
+          "amendments": [],
+          "amended_at": null,
+          "labeled_media": null
+        }
+      }
+    }
+  ]
+]

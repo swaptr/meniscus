@@ -1,0 +1,38 @@
+# Repo-level ignores. Each app and package keeps its own build and data
+# ignores in its own .gitignore; this file covers what applies everywhere.
+
+# Secrets: every .env anywhere in the repo, except committed examples.
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Patient data guard: never commit a store file from any directory.
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+
+# Dependencies
+node_modules/
+
+# Tooling caches and logs
+*.tsbuildinfo
+.eslintcache
+coverage/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS and editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+
+# Local agent and browser tooling
+.playwright-mcp/
+.claude/agents-running
+.claude/settings.local.json
+.claude/worktrees/
+.playwright-mcp/

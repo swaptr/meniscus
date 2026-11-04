@@ -1,0 +1,486 @@
+[
+  [
+    {
+      "v": [
+        {
+          "id": 1,
+          "code": "2C",
+          "name": "Surgical Ward 2C",
+          "specialty": "General surgery",
+          "capacity": 6,
+          "default_acuity": "stable",
+          "occupied": 5,
+          "pending": 0,
+          "last_entry_at": null,
+          "in_charge": { "id": 6, "name": "Meera Pillai", "role": "nurse" }
+        },
+        {
+          "id": 2,
+          "code": "3A",
+          "name": "Medical Ward 3A",
+          "specialty": "General medicine",
+          "capacity": 8,
+          "default_acuity": "stable",
+          "occupied": 7,
+          "pending": 0,
+          "last_entry_at": null,
+          "in_charge": { "id": 4, "name": "Anita Thomas", "role": "nurse" }
+        },
+        {
+          "id": 3,
+          "code": "5B",
+          "name": "Neurology Ward 5B",
+          "specialty": "Neurology",
+          "capacity": 6,
+          "default_acuity": "stable",
+          "occupied": 6,
+          "pending": 0,
+          "last_entry_at": null,
+          "in_charge": { "id": 5, "name": "Grace Lee", "role": "nurse" }
+        },
+        {
+          "id": 4,
+          "code": "HDU",
+          "name": "Renal HDU",
+          "specialty": "Nephrology",
+          "capacity": 4,
+          "default_acuity": "critical",
+          "occupied": 3,
+          "pending": 0,
+          "last_entry_at": null,
+          "in_charge": { "id": 7, "name": "Nikhil Bose", "role": "nurse" }
+        }
+      ]
+    },
+    {
+      "v": { "id": 1, "code": "2C", "name": "Surgical Ward 2C", "specialty": "General surgery", "capacity": 6, "default_acuity": "stable" }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [1, "stable"],
+          [2, "stable"],
+          [3, "stable"],
+          [4, "critical"]
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "v": {
+        "id": 3,
+        "bed": "3",
+        "patient": "Deepa Rao",
+        "weight_kg": 58,
+        "qr_token": "-6m9xHvkRxPaf4fhh8U4sg",
+        "admitted_at": "2026-11-04T10:00:00.000Z",
+        "ward_id": 1,
+        "ward_code": "2C",
+        "ward_name": "Surgical Ward 2C",
+        "mrn": "AT-100213"
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            1,
+            {
+              "id": 1,
+              "bed": "1",
+              "patient": "Arjun Nair",
+              "weight_kg": 72,
+              "qr_token": "C4CSpZsFfE4T8J_4mR2sGg",
+              "admitted_at": "2026-11-04T10:00:00.000Z",
+              "ward_id": 1,
+              "ward_code": "2C",
+              "ward_name": "Surgical Ward 2C",
+              "mrn": "AT-100211"
+            }
+          ],
+          [
+            5,
+            {
+              "id": 5,
+              "bed": "6",
+              "patient": "Fatima Khan",
+              "weight_kg": 61,
+              "qr_token": "ksjmZx9e_TpWx5p7DnP0uA",
+              "admitted_at": "2026-11-04T10:00:00.000Z",
+              "ward_id": 1,
+              "ward_code": "2C",
+              "ward_name": "Surgical Ward 2C",
+              "mrn": "AT-100216"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "v": {
+        "$": "map",
+        "v": [
+          [
+            1,
+            {
+              "id": 1,
+              "bed": "1",
+              "patient": "Arjun Nair",
+              "weight_kg": 72,
+              "qr_token": "C4CSpZsFfE4T8J_4mR2sGg",
+              "admitted_at": "2026-11-04T10:00:00.000Z",
+              "ward_id": 1,
+              "ward_code": "2C",
+              "ward_name": "Surgical Ward 2C",
+              "mrn": "AT-100211"
+            }
+          ],
+          [
+            5,
+            {
+              "id": 5,
+              "bed": "6",
+              "patient": "Fatima Khan",
+              "weight_kg": 61,
+              "qr_token": "ksjmZx9e_TpWx5p7DnP0uA",
+              "admitted_at": "2026-11-04T10:00:00.000Z",
+              "ward_id": 1,
+              "ward_code": "2C",
+              "ward_name": "Surgical Ward 2C",
+              "mrn": "AT-100216"
+            }
+          ]
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "v": [
+        {
+          "id": 1,
+          "name": "Ravi Kumar",
+          "role": "attendant",
+          "wards": [
+            { "id": 2, "code": "3A" },
+            { "id": 1, "code": "2C" }
+          ]
+        },
+        { "id": 2, "name": "Sunita Devi", "role": "attendant", "wards": [{ "id": 2, "code": "3A" }] },
+        {
+          "id": 3,
+          "name": "Mohan Das",
+          "role": "attendant",
+          "wards": [
+            { "id": 3, "code": "5B" },
+            { "id": 1, "code": "2C" }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Anita Thomas",
+          "role": "nurse",
+          "wards": [
+            { "id": 2, "code": "3A" },
+            { "id": 3, "code": "5B" }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Grace Lee",
+          "role": "nurse",
+          "wards": [
+            { "id": 3, "code": "5B" },
+            { "id": 2, "code": "3A" }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Meera Pillai",
+          "role": "nurse",
+          "wards": [
+            { "id": 1, "code": "2C" },
+            { "id": 2, "code": "3A" }
+          ]
+        },
+        { "id": 7, "name": "Nikhil Bose", "role": "nurse", "wards": [{ "id": 4, "code": "HDU" }] },
+        { "id": 8, "name": "Divya Kapoor", "role": "nurse", "wards": [{ "id": 4, "code": "HDU" }] },
+        { "id": 9, "name": "Rekha Gupta", "role": "attendant", "wards": [{ "id": 1, "code": "2C" }] },
+        {
+          "id": 10,
+          "name": "Lakshmi Iyer",
+          "role": "matron",
+          "wards": [
+            { "id": 1, "code": "2C" },
+            { "id": 2, "code": "3A" },
+            { "id": 3, "code": "5B" },
+            { "id": 4, "code": "HDU" }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "Sana Mirza",
+          "role": "dietitian",
+          "wards": [
+            { "id": 1, "code": "2C" },
+            { "id": 2, "code": "3A" },
+            { "id": 3, "code": "5B" },
+            { "id": 4, "code": "HDU" }
+          ]
+        }
+      ]
+    },
+    {
+      "v": {
+        "id": 4,
+        "name": "Anita Thomas",
+        "role": "nurse",
+        "wards": [
+          { "id": 2, "code": "3A" },
+          { "id": 3, "code": "5B" }
+        ]
+      }
+    },
+    {
+      "v": {
+        "staff": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "password_hash": "scrypt$N=32768,r=8,p=1$8D0jbe1C538kz3lRzQMwSA$nR9VavH4ZPWDHN5R65Lk1meGo8RhwLkVuccmx05pxw0"
+      }
+    },
+    { "v": "anita" }
+  ],
+  [
+    {
+      "v": {
+        "ward_id": 1,
+        "shift_start": "2026-11-04T02:30:00.000Z",
+        "in_charge": { "id": 6, "name": "Meera Pillai", "role": "nurse" },
+        "team": [
+          { "id": 6, "name": "Meera Pillai", "role": "nurse", "home": true },
+          { "id": 9, "name": "Rekha Gupta", "role": "attendant", "home": true },
+          { "id": 10, "name": "Lakshmi Iyer", "role": "matron", "home": true },
+          { "id": 11, "name": "Sana Mirza", "role": "dietitian", "home": true },
+          { "id": 1, "name": "Ravi Kumar", "role": "attendant", "home": false },
+          { "id": 3, "name": "Mohan Das", "role": "attendant", "home": false }
+        ],
+        "assignments": [
+          { "admission_id": 1, "staff_id": 6 },
+          { "admission_id": 2, "staff_id": 6 },
+          { "admission_id": 3, "staff_id": 6 },
+          { "admission_id": 4, "staff_id": 6 },
+          { "admission_id": 5, "staff_id": 6 }
+        ]
+      }
+    },
+    {
+      "v": {
+        "ward_id": 2,
+        "shift_start": "2026-11-04T02:30:00.000Z",
+        "in_charge": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "team": [
+          { "id": 1, "name": "Ravi Kumar", "role": "attendant", "home": true },
+          { "id": 2, "name": "Sunita Devi", "role": "attendant", "home": true },
+          { "id": 4, "name": "Anita Thomas", "role": "nurse", "home": true },
+          { "id": 5, "name": "Grace Lee", "role": "nurse", "home": false },
+          { "id": 6, "name": "Meera Pillai", "role": "nurse", "home": false },
+          { "id": 10, "name": "Lakshmi Iyer", "role": "matron", "home": false },
+          { "id": 11, "name": "Sana Mirza", "role": "dietitian", "home": false }
+        ],
+        "assignments": [
+          { "admission_id": 6, "staff_id": 4 },
+          { "admission_id": 7, "staff_id": 4 },
+          { "admission_id": 8, "staff_id": 4 },
+          { "admission_id": 9, "staff_id": 4 },
+          { "admission_id": 10, "staff_id": 4 },
+          { "admission_id": 11, "staff_id": 4 },
+          { "admission_id": 12, "staff_id": 4 }
+        ]
+      }
+    },
+    {
+      "v": {
+        "ward_id": 3,
+        "shift_start": "2026-11-04T02:30:00.000Z",
+        "in_charge": { "id": 5, "name": "Grace Lee", "role": "nurse" },
+        "team": [
+          { "id": 3, "name": "Mohan Das", "role": "attendant", "home": true },
+          { "id": 5, "name": "Grace Lee", "role": "nurse", "home": true },
+          { "id": 4, "name": "Anita Thomas", "role": "nurse", "home": false },
+          { "id": 10, "name": "Lakshmi Iyer", "role": "matron", "home": false },
+          { "id": 11, "name": "Sana Mirza", "role": "dietitian", "home": false }
+        ],
+        "assignments": [
+          { "admission_id": 13, "staff_id": 5 },
+          { "admission_id": 14, "staff_id": 5 },
+          { "admission_id": 15, "staff_id": 5 },
+          { "admission_id": 16, "staff_id": 5 },
+          { "admission_id": 17, "staff_id": 5 },
+          { "admission_id": 18, "staff_id": 5 }
+        ]
+      }
+    },
+    {
+      "v": {
+        "ward_id": 4,
+        "shift_start": "2026-11-04T02:30:00.000Z",
+        "in_charge": { "id": 7, "name": "Nikhil Bose", "role": "nurse" },
+        "team": [
+          { "id": 7, "name": "Nikhil Bose", "role": "nurse", "home": true },
+          { "id": 8, "name": "Divya Kapoor", "role": "nurse", "home": true },
+          { "id": 10, "name": "Lakshmi Iyer", "role": "matron", "home": false },
+          { "id": 11, "name": "Sana Mirza", "role": "dietitian", "home": false }
+        ],
+        "assignments": [
+          { "admission_id": 19, "staff_id": 7 },
+          { "admission_id": 20, "staff_id": 7 },
+          { "admission_id": 21, "staff_id": 8 }
+        ]
+      }
+    },
+    {
+      "v": {
+        "ward_id": 2,
+        "shift_start": "2026-11-04T02:30:00.000Z",
+        "in_charge": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "team": [
+          { "id": 1, "name": "Ravi Kumar", "role": "attendant", "home": true },
+          { "id": 2, "name": "Sunita Devi", "role": "attendant", "home": true },
+          { "id": 4, "name": "Anita Thomas", "role": "nurse", "home": true },
+          { "id": 5, "name": "Grace Lee", "role": "nurse", "home": false },
+          { "id": 6, "name": "Meera Pillai", "role": "nurse", "home": false },
+          { "id": 10, "name": "Lakshmi Iyer", "role": "matron", "home": false },
+          { "id": 11, "name": "Sana Mirza", "role": "dietitian", "home": false }
+        ],
+        "assignments": [
+          { "admission_id": 6, "staff_id": 4 },
+          { "admission_id": 7, "staff_id": 4 },
+          { "admission_id": 8, "staff_id": 4 },
+          { "admission_id": 9, "staff_id": 4 },
+          { "admission_id": 10, "staff_id": 4 },
+          { "admission_id": 11, "staff_id": 4 },
+          { "admission_id": 12, "staff_id": 4 }
+        ]
+      }
+    },
+    {
+      "v": {
+        "ward_id": 2,
+        "shift_start": "2026-11-04T02:30:00.000Z",
+        "in_charge": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "team": [
+          { "id": 1, "name": "Ravi Kumar", "role": "attendant", "home": true },
+          { "id": 2, "name": "Sunita Devi", "role": "attendant", "home": true },
+          { "id": 4, "name": "Anita Thomas", "role": "nurse", "home": true },
+          { "id": 5, "name": "Grace Lee", "role": "nurse", "home": false },
+          { "id": 6, "name": "Meera Pillai", "role": "nurse", "home": false },
+          { "id": 10, "name": "Lakshmi Iyer", "role": "matron", "home": false },
+          { "id": 11, "name": "Sana Mirza", "role": "dietitian", "home": false }
+        ],
+        "assignments": [
+          { "admission_id": 6, "staff_id": 4 },
+          { "admission_id": 7, "staff_id": 4 }
+        ]
+      }
+    },
+    {
+      "v": {
+        "ward_id": 2,
+        "shift_start": "2026-11-04T02:30:00.000Z",
+        "in_charge": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "team": [
+          { "id": 1, "name": "Ravi Kumar", "role": "attendant", "home": true },
+          { "id": 2, "name": "Sunita Devi", "role": "attendant", "home": true },
+          { "id": 4, "name": "Anita Thomas", "role": "nurse", "home": true },
+          { "id": 5, "name": "Grace Lee", "role": "nurse", "home": false },
+          { "id": 6, "name": "Meera Pillai", "role": "nurse", "home": false },
+          { "id": 10, "name": "Lakshmi Iyer", "role": "matron", "home": false },
+          { "id": 11, "name": "Sana Mirza", "role": "dietitian", "home": false }
+        ],
+        "assignments": []
+      }
+    },
+    {
+      "v": [
+        {
+          "id": 1,
+          "code": "2C",
+          "name": "Surgical Ward 2C",
+          "specialty": "General surgery",
+          "capacity": 6,
+          "default_acuity": "stable",
+          "occupied": 5,
+          "pending": 0,
+          "last_entry_at": null,
+          "in_charge": { "id": 6, "name": "Meera Pillai", "role": "nurse" }
+        },
+        {
+          "id": 2,
+          "code": "3A",
+          "name": "Medical Ward 3A",
+          "specialty": "General medicine",
+          "capacity": 8,
+          "default_acuity": "stable",
+          "occupied": 7,
+          "pending": 0,
+          "last_entry_at": null,
+          "in_charge": { "id": 4, "name": "Anita Thomas", "role": "nurse" }
+        },
+        {
+          "id": 3,
+          "code": "5B",
+          "name": "Neurology Ward 5B",
+          "specialty": "Neurology",
+          "capacity": 6,
+          "default_acuity": "stable",
+          "occupied": 6,
+          "pending": 0,
+          "last_entry_at": null,
+          "in_charge": { "id": 5, "name": "Grace Lee", "role": "nurse" }
+        },
+        {
+          "id": 4,
+          "code": "HDU",
+          "name": "Renal HDU",
+          "specialty": "Nephrology",
+          "capacity": 4,
+          "default_acuity": "critical",
+          "occupied": 3,
+          "pending": 0,
+          "last_entry_at": null,
+          "in_charge": { "id": 7, "name": "Nikhil Bose", "role": "nurse" }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "v": {
+        "id": 1,
+        "ward_id": 1,
+        "created_by": { "id": 4, "name": "Anita Thomas", "role": "nurse" },
+        "reason": "covering a break",
+        "created_at": "2026-11-04T10:00:00.000Z"
+      }
+    }
+  ],
+  [
+    { "v": { "$": "u" } },
+    {
+      "v": {
+        "id": 4,
+        "name": "Anita Thomas",
+        "role": "nurse",
+        "wards": [
+          { "id": 2, "code": "3A" },
+          { "id": 3, "code": "5B" }
+        ]
+      }
+    },
+    { "v": null }
+  ],
+  [],
+  []
+]

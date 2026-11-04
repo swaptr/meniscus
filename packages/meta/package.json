@@ -1,0 +1,21 @@
+{
+  "name": "@meniscus/meta",
+  "private": true,
+  "type": "module",
+  "description": "Lean typed client for the Meta Model API: Responses (Muse Spark), SAM 3.1, speech-to-text, models.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "tsx --test 'src/**/*.test.ts'"
+  },
+  "dependencies": {
+    "@meta-sam/parser": "0.1.0"
+  },
+  "devDependencies": {
+    "@meniscus/config": "workspace:*",
+    "@types/node": "^22.20.5",
+    "tsx": "4.23.15"
+  }
+}

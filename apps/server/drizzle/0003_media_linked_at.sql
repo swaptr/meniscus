@@ -1,0 +1,2 @@
+ALTER TABLE "meniscus"."media" ADD COLUMN "linked_at" timestamp with time zone;--> statement-breakpoint
+CREATE INDEX "media_unlinked" ON "meniscus"."media" USING btree ("created_at") WHERE "meniscus"."media"."linked_at" IS NULL;

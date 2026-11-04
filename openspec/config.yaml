@@ -1,0 +1,44 @@
+schema: spec-driven
+
+# Injected into every artifact, apply and archive. Only what an agent cannot infer from the code.
+context: |
+  Meniscus: hospital fluid intake/output charting. Ward staff capture a photo or voice note at the
+  bed; Meta models (Muse Spark, SAM 3.1, speech-to-text) turn it into a draft chart entry that a
+  nurse approves. Documentation aid only: never diagnose, all clinical flags say "review".
+  Hackathon build (deadline Nov 4, 2026): prefer the smallest change that demos reliably.
+
+  Capability paths are <domain>/<capability>. Domains: capture (photo/voice/text → draft entries),
+  model-api (the @meniscus/meta client and how the server maps its errors), plus new domains as the
+  product grows (charting, alerts, family). Reuse an existing capability before creating one.
+
+  Model API credits are limited. Every requirement that calls a model states the exact number of
+  upstream requests it makes. Never introduce retry loops, fallback chains or polling.
+  Patient media must not be retained upstream: store:false on every Responses API request. Speech-to-text has no per-request option, so audio follows the organisation's Meta data-retention setting.
+
+rules:
+  proposal:
+    - "State what is out of scope."
+    - "State the change in upstream model requests per user action (before → after); 'none' is a valid answer."
+    - "Name every packages/shared type or HTTP response shape that changes; a changed shape the web app consumes is BREAKING."
+  specs:
+    - "Requirements describe observable behaviour at an edge (HTTP response, stored row, model request count, UI), never internal function names."
+    - "Every scenario is concrete enough to become one test: real values, not 'some data'."
+    - "Keep it small: only the behaviour this change adds or modifies. Do not back-fill unrelated capabilities."
+  design:
+    - "Show changed types first (packages/shared, @meniscus/meta) as TypeScript."
+    - "Name which layer owns each new module: packages/meta (transport only), apps/server/src/ai (domain), apps/server/src/routes (HTTP), apps/web."
+  tasks:
+    - "Every implementation task names the requirement(s) it satisfies and the test that cites them, in the form [<domain>/<capability>] <Requirement name>."
+    - "Shared types and contracts land before implementations; each task group lands its own tests."
+    - "End with: `pnpm verify` passes (format, lint, typecheck, tests, specs, traces)."
+
+operations:
+  apply:
+    guidance:
+      - "Write the citing test first (title starts with [<domain>/<capability>] <Requirement name>), see it fail, then implement."
+      - "Never weaken, skip or delete a test to make it pass; if the requirement is wrong, stop and update the change's delta spec."
+      - "Tests never call the live model API: use a fake fetch with createMetaClient and assert request counts."
+      - "Run `pnpm spec:check` and the owning package's tests before checking off a task."
+  archive:
+    guidance:
+      - "Before archiving, `pnpm verify` must pass."

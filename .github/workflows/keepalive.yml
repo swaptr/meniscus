@@ -1,0 +1,36 @@
+# Keeps the demo awake during judging (November).
+# - Render: pings /api/health every 10 minutes, so a free instance never sleeps (it sleeps after 15 min idle).
+#   /api/health touches neither the database nor S3.
+# - Supabase: a Free project pauses after 7 days of low activity, so once a day this runs `select 1`
+#   against the database.
+# Enable with the repository secret MENISCUS_URL (e.g. https://meniscus.onrender.com) and the secret
+# DATABASE_URL (the same one ci.yml deploys). Either step skips when its value is unset.
+name: keepalive
+
+on:
+  schedule:
+    - cron: '*/10 * 4-30 11 *' # every 10 min, Nov 4–30 (UTC)
+    - cron: '17 6 * 11,12 *' # daily database touch, Nov–Dec
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      URL: ${{ secrets.MENISCUS_URL }}
+    steps:
+      - name: Ping the app
+        run: '[ -z "$URL" ] || curl -fsS --retry 3 --retry-delay 20 --max-time 90 -o /dev/null "$URL/api/health"'
+
+  database:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '17 6 * 11,12 *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - name: Touch the database
+        run: '[ -z "$DATABASE_URL" ] || psql "$DATABASE_URL" -Atqc "select 1" > /dev/null'

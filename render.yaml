@@ -1,0 +1,49 @@
+services:
+  - type: web
+    name: meniscus
+    runtime: node
+    region: frankfurt # permanent; match the Supabase region
+    plan: free # spins down after 15 min idle (keepalive.yml pings every 10 min); no Render Shell
+    buildCommand: corepack enable && pnpm install --frozen-lockfile --prod=false && pnpm build
+    startCommand: node apps/server/src/index.ts
+    healthCheckPath: /api/health
+    autoDeployTrigger: 'off' # deploys come from GitHub Actions (.github/workflows/ci.yml)
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0 # Render sets PORT
+      - key: TRUST_PROXY_HOPS
+        value: '1'
+      - key: MENISCUS_DEMO_LOGIN
+        value: '1' # demo only
+      - key: MODEL_API_KEY
+        sync: false
+      - key: MODEL_API_MAX_REQUESTS_PER_HOUR
+        value: '120'
+      - key: MODEL_API_MAX_CONCURRENT
+        value: '4'
+      - key: CRITICAL_RESERVE_PCT
+        value: '30'
+      - key: AI_RATE_LIMIT_PER_MINUTE
+        value: '20'
+      # s3-media (required: production refuses MEDIA_STORE unset or memory)
+      - key: MEDIA_STORE
+        value: s3
+      - key: S3_ENDPOINT # https://<project_ref>.storage.supabase.co/storage/v1/s3
+        sync: false
+      - key: S3_REGION
+        value: eu-central-1
+      - key: S3_BUCKET
+        value: meniscus-media
+      - key: S3_ACCESS_KEY_ID
+        sync: false
+      - key: S3_SECRET_ACCESS_KEY
+        sync: false
+      # postgres-store (required: the server refuses to start without DATABASE_URL)
+      - key: DATABASE_URL # Session pooler :5432, sslmode=verify-full (DATABASE_SESSION_URL optional)
+        sync: false
+      - key: DATABASE_CA_FILE
+        value: /etc/secrets/supabase-ca.crt
+      - key: DATABASE_POOL_MAX
+        value: '5'

@@ -1,0 +1,48 @@
+# Local Supabase stack for development (`pnpm dev:stack`, alias `pnpm dev:s3`): Postgres for the chart and Storage for media, with the API gateway.
+# Keys follow the Supabase CLI 3.0.0 config reference: https://supabase.com/docs/guides/local-development/cli/config
+project_id = "meniscus"
+
+# The chart's database: DATABASE_URL=postgresql://postgres:postgres@127.0.0.1:54322/postgres in `.env`.
+# major_version must match the hosted project's (`SHOW server_version;`).
+[db]
+port = 54322
+major_version = 17
+
+# The server seeds the demo hospital from TypeScript and migrates with Drizzle; the CLI's seed stays off.
+[db.seed]
+enabled = false
+
+[storage]
+enabled = true
+file_size_limit = "26MiB"
+
+# The S3 protocol endpoint: http://127.0.0.1:54321/storage/v1/s3, region `local`.
+[storage.s3_protocol]
+enabled = true
+
+# Private, as the production bucket: the server proxies every read; the web never contacts the bucket.
+[storage.buckets.meniscus-media]
+public = false
+file_size_limit = "26MiB"
+allowed_mime_types = ["image/jpeg", "image/png", "image/webp", "image/gif", "audio/webm", "audio/ogg", "audio/mp4", "audio/wav", "audio/mpeg"]
+
+[storage.vector]
+enabled = false
+
+[studio]
+enabled = false
+
+[auth]
+enabled = false
+
+[realtime]
+enabled = false
+
+[edge_runtime]
+enabled = false
+
+[local_smtp]
+enabled = false
+
+[analytics]
+enabled = false

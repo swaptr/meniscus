@@ -1,0 +1,362 @@
+# CI and production deploy. Render deploys only from here (render.yaml: autoDeployTrigger: off).
+#
+# Env names follow apps/server/src/config.ts (plus the s3-media and postgres-store variables).
+#
+# Settings -> Secrets and variables -> Actions.
+# Every deploy REPLACES the Render service's whole env-var list with the non-empty APP_* values below
+# (the secret file is uploaded separately). A variable not listed here is removed from Render on the next deploy.
+#
+# Secrets (required):
+#   RENDER_API_KEY, RENDER_SERVICE_ID, MODEL_API_KEY, S3_ACCESS_KEY_ID, S3_SECRET_ACCESS_KEY,
+#   DATABASE_URL (pooler :5432 session mode is enough on its own; or :6543 with DATABASE_SESSION_URL on :5432)
+# Also secrets (required):
+#   S3_ENDPOINT, S3_REGION. The secret DATABASE_CA_PEM (the Supabase CA's PEM text) is required too: each deploy
+#   uploads it as the Render secret file supabase-ca.crt; DATABASE_CA_FILE defaults to /etc/secrets/supabase-ca.crt.
+# Optional secrets (default in brackets, none means the server's own default):
+#   NODE_ENV [production], HOST [0.0.0.0], TRUST_PROXY_HOPS [1], MEDIA_STORE [s3], S3_BUCKET [meniscus-media],
+#   MENISCUS_DEMO_LOGIN [1], MODEL_API_MAX_REQUESTS_PER_HOUR [120],
+#   MODEL_API_MAX_CONCURRENT [4], CRITICAL_RESERVE_PCT [30], AI_RATE_LIMIT_PER_MINUTE [20], DATABASE_POOL_MAX,
+#   S3_FORCE_PATH_STYLE, SHUTDOWN_GRACE_MS, MODEL_API_BASE_URL, MODEL_API_TIMEOUT_MS, SPARK_MODEL, SAM_MODEL,
+#   ASR_MODEL, SPARK_READ_EFFORT, SPARK_NOTE_EFFORT, READ_USE_SAM, MEAL_USE_SAM
+#
+# Changed a secret or variable only? Actions -> ci -> Run workflow (on main).
+#
+# No migration step: the server applies the committed Drizzle migrations at start, on DATABASE_SESSION_URL.
+#
+# Seeding production: Actions -> ci -> Run workflow on main, with boxes ticked. Both run after the deploy is live.
+#   seed     24 h of fictional chart history and synthetic media into the production database and bucket
+#            (scripts/demo-history.ts; 0 model requests; refuses a database that already holds entries).
+#            Needs the secret DATABASE_CA_PEM (the Supabase CA certificate's PEM text) besides the deploy values.
+#   capture  the demo-pack photos through the deployed app's own capture flow over HTTP, as a demo attendant
+#            (scripts/demo-capture.ts; 3 model requests per photo, sent by the server). Ticking it approves them.
+#            Needs the secret MENISCUS_URL. capture_only picks the photos (default: urine bag and water jug,
+#            6 requests; the IV photos read as "other" and make no entry).
+
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      seed:
+        description: After deploying, seed demo chart history into production (0 model requests)
+        type: boolean
+        default: false
+      capture:
+        description: After deploying, send demo photos through the live capture flow (3 model requests per photo)
+        type: boolean
+        default: false
+      capture_only:
+        description: Photos for capture, comma-separated (empty = all four, 12 requests)
+        type: string
+        default: demo-urine-01.jpg,demo-water-02.jpg
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  # PR runs are superseded by the next push; main runs queue so every commit deploys in order.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENSPEC_TELEMETRY: '0'
+      OPENSPEC_NO_UPDATE_CHECK: '1'
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - id: node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.18.0 # 24.22.2 crashed V8 freeing PGlite wasm in tests
+          # The pnpm store, keyed on the lockfile hash (saved by setup-node's post step).
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Install ffmpeg (voice-note tests convert audio)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pnpm install --frozen-lockfile --prefer-offline
+      # Tool caches, all content-based: Prettier (--cache-strategy content; keyed on Prettier and Node versions and
+      # options) and tsc incremental .tsbuildinfo (per-file content hashes and dependency signatures). Restored after
+      # install so pnpm sees a fresh node_modules. ESLint is not cached: its cache does not track cross-file type
+      # information, so type-aware rules could report stale results (https://eslint.org/docs/latest/use/command-line-interface#--cache).
+      - name: Restore tool caches
+        uses: actions/cache/restore@v6
+        with:
+          path: |
+            node_modules/.cache/prettier
+            tsconfig.tsbuildinfo
+            apps/*/tsconfig.tsbuildinfo
+            packages/*/tsconfig.tsbuildinfo
+          key: tools-${{ runner.os }}-${{ runner.arch }}-node${{ steps.node.outputs.node-version }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          restore-keys: |
+            tools-${{ runner.os }}-${{ runner.arch }}-node${{ steps.node.outputs.node-version }}-${{ hashFiles('pnpm-lock.yaml') }}-
+            tools-${{ runner.os }}-${{ runner.arch }}-node${{ steps.node.outputs.node-version }}-
+      - name: Bash guard cases
+        run: bash .claude/hooks/guard-bash.test.sh
+      - run: pnpm verify
+      - name: Build the web app (Vite, bundle budget)
+        run: pnpm build
+      # Saved from main only (PRs restore main's), and even when a check failed: entries are content-checked.
+      - name: Save tool caches
+        if: always() && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/cache/save@v6
+        with:
+          path: |
+            node_modules/.cache/prettier
+            tsconfig.tsbuildinfo
+            apps/*/tsconfig.tsbuildinfo
+            packages/*/tsconfig.tsbuildinfo
+          key: tools-${{ runner.os }}-${{ runner.arch }}-node${{ steps.node.outputs.node-version }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}-${{ github.run_attempt }}
+
+  # Fails early, beside `check`, when a production dependency is unreachable or misconfigured: the Render API key and
+  # service, the database (TLS verified with the CA), the media bucket, and the Meta Model API key (one GET /models,
+  # a listing, not a generation). Each failing line names what is wrong; no secret is printed.
+  preflight:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Render API key and service
+        env:
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+          RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+        run: |
+          set -uo pipefail
+          [ -n "$RENDER_API_KEY" ] || { echo "::error::secret RENDER_API_KEY is not set"; exit 1; }
+          [ -n "$RENDER_SERVICE_ID" ] || { echo "::error::secret RENDER_SERVICE_ID is not set"; exit 1; }
+          code=$(curl -sS -o svc.json -w '%{http_code}' "https://api.render.com/v1/services/$RENDER_SERVICE_ID" \
+            -H "Authorization: Bearer $RENDER_API_KEY" -H 'Accept: application/json')
+          case "$code" in
+            200) echo "ok    Render service $(jq -r '.name' svc.json) ($(jq -r '.serviceDetails.url // empty' svc.json))" ;;
+            401) echo "::error::Render refused RENDER_API_KEY (401)"; exit 1 ;;
+            404) echo "::error::Render has no service RENDER_SERVICE_ID for this key (404)"; exit 1 ;;
+            *) echo "::error::Render API returned $code"; exit 1 ;;
+          esac
+          rm -f svc.json
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24.18.0 # 24.22.2 crashed V8 freeing PGlite wasm in tests
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile --prefer-offline
+      - name: Database, bucket and Meta Model API
+        env:
+          PEM: ${{ secrets.DATABASE_CA_PEM }}
+          PF_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          PF_DATABASE_SESSION_URL: ${{ secrets.DATABASE_SESSION_URL }}
+          PF_S3_BUCKET: ${{ secrets.S3_BUCKET }}
+          NODE_ENV: production
+          MEDIA_STORE: s3
+          S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
+          S3_REGION: ${{ secrets.S3_REGION }}
+          S3_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
+          S3_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+          MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+        run: |
+          set -euo pipefail
+          missing=()
+          for name in PEM PF_DATABASE_URL S3_ENDPOINT S3_REGION S3_ACCESS_KEY_ID S3_SECRET_ACCESS_KEY MODEL_API_KEY; do
+            [ -n "${!name}" ] || missing+=("${name#PF_}")
+          done
+          [ "${#missing[@]}" -eq 0 ] || { echo "::error::Missing GitHub secrets: ${missing[*]/PEM/DATABASE_CA_PEM}"; exit 1; }
+          export DATABASE_CA_FILE="$RUNNER_TEMP/supabase-ca.crt"
+          printf '%s\n' "$PEM" > "$DATABASE_CA_FILE"
+          export DATABASE_URL="$PF_DATABASE_URL"
+          # Empty values stay unset, so the server's defaults apply.
+          [ -z "$PF_DATABASE_SESSION_URL" ] || export DATABASE_SESSION_URL="$PF_DATABASE_SESSION_URL"
+          [ -z "$PF_S3_BUCKET" ] || export S3_BUCKET="$PF_S3_BUCKET"
+          pnpm --filter @meniscus/server exec tsx scripts/preflight.ts
+
+  deploy:
+    needs: [check, preflight]
+    if: needs.check.result == 'success' && needs.preflight.result == 'success' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+      RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+      # App env, synced to Render with the APP_ prefix stripped. Empty values are left out.
+      APP_NODE_ENV: ${{ secrets.NODE_ENV || 'production' }}
+      APP_HOST: ${{ secrets.HOST || '0.0.0.0' }}
+      APP_TRUST_PROXY_HOPS: ${{ secrets.TRUST_PROXY_HOPS || '1' }}
+      APP_MENISCUS_DEMO_LOGIN: ${{ secrets.MENISCUS_DEMO_LOGIN || '1' }}
+      APP_SHUTDOWN_GRACE_MS: ${{ secrets.SHUTDOWN_GRACE_MS }}
+      APP_AI_RATE_LIMIT_PER_MINUTE: ${{ secrets.AI_RATE_LIMIT_PER_MINUTE || '20' }}
+      APP_MODEL_API_KEY: ${{ secrets.MODEL_API_KEY }}
+      APP_MODEL_API_BASE_URL: ${{ secrets.MODEL_API_BASE_URL }}
+      APP_MODEL_API_TIMEOUT_MS: ${{ secrets.MODEL_API_TIMEOUT_MS }}
+      APP_MODEL_API_MAX_REQUESTS_PER_HOUR: ${{ secrets.MODEL_API_MAX_REQUESTS_PER_HOUR || '120' }}
+      APP_MODEL_API_MAX_CONCURRENT: ${{ secrets.MODEL_API_MAX_CONCURRENT || '4' }}
+      APP_CRITICAL_RESERVE_PCT: ${{ secrets.CRITICAL_RESERVE_PCT || '30' }}
+      APP_SPARK_MODEL: ${{ secrets.SPARK_MODEL }}
+      APP_SAM_MODEL: ${{ secrets.SAM_MODEL }}
+      APP_ASR_MODEL: ${{ secrets.ASR_MODEL }}
+      APP_SPARK_READ_EFFORT: ${{ secrets.SPARK_READ_EFFORT }}
+      APP_SPARK_NOTE_EFFORT: ${{ secrets.SPARK_NOTE_EFFORT }}
+      APP_READ_USE_SAM: ${{ secrets.READ_USE_SAM }}
+      APP_MEAL_USE_SAM: ${{ secrets.MEAL_USE_SAM }}
+      # s3-media
+      APP_MEDIA_STORE: ${{ secrets.MEDIA_STORE || 's3' }}
+      APP_S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
+      APP_S3_REGION: ${{ secrets.S3_REGION }}
+      APP_S3_BUCKET: ${{ secrets.S3_BUCKET || 'meniscus-media' }}
+      APP_S3_FORCE_PATH_STYLE: ${{ secrets.S3_FORCE_PATH_STYLE }}
+      APP_S3_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
+      APP_S3_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+      # postgres-store (required: the server refuses to start without DATABASE_URL)
+      APP_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      APP_DATABASE_SESSION_URL: ${{ secrets.DATABASE_SESSION_URL }}
+      APP_DATABASE_CA_FILE: ${{ secrets.DATABASE_CA_FILE || '/etc/secrets/supabase-ca.crt' }}
+      # Uploaded as the Render secret file supabase-ca.crt (not an env var: no APP_ prefix).
+      DATABASE_CA_PEM: ${{ secrets.DATABASE_CA_PEM }}
+      APP_DATABASE_POOL_MAX: ${{ secrets.DATABASE_POOL_MAX }}
+    steps:
+      - name: Check secrets
+        run: |
+          missing=()
+          for name in RENDER_API_KEY RENDER_SERVICE_ID APP_MODEL_API_KEY APP_S3_ACCESS_KEY_ID APP_S3_SECRET_ACCESS_KEY APP_S3_ENDPOINT APP_S3_REGION APP_DATABASE_URL DATABASE_CA_PEM; do
+            [ -n "${!name}" ] || missing+=("${name#APP_}")
+          done
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "::error::Missing GitHub secrets: ${missing[*]}"
+            exit 1
+          fi
+
+      - name: Upload the database CA as a Render secret file
+        run: |
+          set -euo pipefail
+          # Render API "Add or update secret file": PUT /services/{serviceId}/secret-files/{name}, body {content}.
+          # The file lands at /etc/secrets/supabase-ca.crt; DATABASE_CA_FILE points there unless overridden.
+          name=$(basename "$APP_DATABASE_CA_FILE")
+          jq -n --arg content "$DATABASE_CA_PEM" '{content: ($content + "\n")}' > ca.json
+          code=$(curl -sS -o resp.json -w '%{http_code}' -X PUT \
+            "https://api.render.com/v1/services/$RENDER_SERVICE_ID/secret-files/$name" \
+            -H "Authorization: Bearer $RENDER_API_KEY" -H 'Accept: application/json' -H 'Content-Type: application/json' \
+            --data-binary @ca.json)
+          rm -f ca.json
+          case "$code" in
+            200 | 201) echo "Secret file $name updated" ;;
+            *) echo "::error::Render secret-files PUT returned $code: $(jq -r '.message? // empty' resp.json 2>/dev/null)"; rm -f resp.json; exit 1 ;;
+          esac
+          rm -f resp.json
+
+      - name: Sync env vars to Render
+        run: |
+          set -euo pipefail
+          jq -n '[$ENV | to_entries[] | select((.key | startswith("APP_")) and .value != "") | {key: (.key | ltrimstr("APP_")), value}] | sort_by(.key)' > env.json
+          code=$(curl -sS -o resp.json -w '%{http_code}' -X PUT \
+            "https://api.render.com/v1/services/$RENDER_SERVICE_ID/env-vars" \
+            -H "Authorization: Bearer $RENDER_API_KEY" -H 'Accept: application/json' -H 'Content-Type: application/json' \
+            --data-binary @env.json)
+          rm -f env.json
+          if [ "$code" != 200 ]; then
+            echo "::error::Render env-vars PUT returned $code: $(jq -r '.message? // empty' resp.json 2>/dev/null)"
+            exit 1
+          fi
+          echo "Synced (names only):"
+          jq -r '.[] | (.envVar.key // .key)' resp.json
+          rm -f resp.json
+
+      - name: Deploy and wait
+        run: |
+          set -euo pipefail
+          api="https://api.render.com/v1/services/$RENDER_SERVICE_ID/deploys"
+          auth=(-H "Authorization: Bearer $RENDER_API_KEY" -H 'Accept: application/json')
+          code=$(curl -sS -o deploy.json -w '%{http_code}' -X POST "$api" "${auth[@]}" \
+            -H 'Content-Type: application/json' --data "{\"commitId\": \"$GITHUB_SHA\"}")
+          case "$code" in
+            201) id=$(jq -r '.id' deploy.json) ;;
+            202) # Queued behind a running deploy, no body: find it by commit.
+              id=$(curl -sS --fail-with-body "$api?limit=20" "${auth[@]}" \
+                | jq -r --arg sha "$GITHUB_SHA" '[.[].deploy | select(.commit.id == $sha)][0].id // empty') ;;
+            *) echo "::error::Render deploy POST returned $code: $(jq -r '.message? // empty' deploy.json 2>/dev/null)"; exit 1 ;;
+          esac
+          [ -n "$id" ] || { echo "::error::No deploy id for $GITHUB_SHA"; exit 1; }
+          echo "Deploy $id for $GITHUB_SHA"
+          # Fixed bound: 90 checks, 10 s apart (15 min).
+          for _ in $(seq 1 90); do
+            status=$(curl -sS --fail-with-body "$api/$id" "${auth[@]}" | jq -r '.status')
+            echo "status: $status"
+            case "$status" in
+              live) exit 0 ;;
+              build_failed | update_failed | canceled | deactivated | pre_deploy_failed)
+                echo "::error::Render deploy $id ended with $status"; exit 1 ;;
+            esac
+            sleep 10
+          done
+          echo "::error::Render deploy $id not live after 15 minutes"
+          exit 1
+
+  seed:
+    needs: [deploy]
+    if: needs.deploy.result == 'success' && github.event_name == 'workflow_dispatch' && inputs.seed
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24.18.0 # 24.22.2 crashed V8 freeing PGlite wasm in tests
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile --prefer-offline
+      - name: Seed demo history (0 model requests)
+        env:
+          PEM: ${{ secrets.DATABASE_CA_PEM }}
+          SEED_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SEED_DATABASE_SESSION_URL: ${{ secrets.DATABASE_SESSION_URL }}
+          SEED_S3_BUCKET: ${{ secrets.S3_BUCKET }}
+          MEDIA_STORE: s3
+          S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
+          S3_REGION: ${{ secrets.S3_REGION }}
+          S3_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
+          S3_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+        run: |
+          set -euo pipefail
+          for name in PEM SEED_DATABASE_URL S3_ENDPOINT S3_REGION S3_ACCESS_KEY_ID S3_SECRET_ACCESS_KEY; do
+            [ -n "${!name}" ] || { echo "::error::$name (secret) is not set"; exit 1; }
+          done
+          export DATABASE_CA_FILE="$RUNNER_TEMP/supabase-ca.crt"
+          printf '%s\n' "$PEM" > "$DATABASE_CA_FILE"
+          export DATABASE_URL="$SEED_DATABASE_URL"
+          # Empty values are left unset, so the script's defaults apply.
+          [ -z "$SEED_DATABASE_SESSION_URL" ] || export DATABASE_SESSION_URL="$SEED_DATABASE_SESSION_URL"
+          [ -z "$SEED_S3_BUCKET" ] || export S3_BUCKET="$SEED_S3_BUCKET"
+          cd apps/server && pnpm exec tsx scripts/demo-history.ts
+
+  capture:
+    needs: [deploy, seed]
+    if: always() && needs.deploy.result == 'success' && needs.seed.result != 'failure' && github.event_name == 'workflow_dispatch' && inputs.capture
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24.18.0 # 24.22.2 crashed V8 freeing PGlite wasm in tests
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile --prefer-offline
+      - name: Install ImageMagick (shrinks photos the way the web does)
+        run: command -v magick || command -v convert || (sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick)
+      - name: Send the demo photos through the live capture flow
+        env:
+          URL: ${{ secrets.MENISCUS_URL }}
+          ONLY: ${{ inputs.capture_only }}
+          DEMO_CAPTURE_PASSWORD: ${{ secrets.DEMO_CAPTURE_PASSWORD }}
+        run: |
+          set -euo pipefail
+          [ -n "$URL" ] || { echo "::error::secret MENISCUS_URL is not set"; exit 1; }
+          set -- "$URL"
+          [ -z "$ONLY" ] || set -- "$@" --only "$ONLY"
+          cd apps/server && pnpm exec tsx scripts/demo-capture.ts "$@" --yes

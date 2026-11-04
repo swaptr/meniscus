@@ -1,0 +1,62 @@
+{
+  "pack": "meniscus-demo-images",
+  "synthetic": true,
+  "items": [
+    {
+      "file": "demo-iv-01.jpg",
+      "category": "iv",
+      "container": "other",
+      "fluid": "other",
+      "expected_ml": 1000,
+      "liquid_colour": null,
+      "meal_portion_eaten": null,
+      "pair_id": null,
+      "pair_role": null,
+      "source_id": "synth-ivbag-1000",
+      "synthetic": true,
+      "note": "synthetic demo image, fictional patient"
+    },
+    {
+      "file": "demo-urine-01.jpg",
+      "category": "urine",
+      "container": "urine_bag",
+      "fluid": "urine",
+      "expected_ml": 1400,
+      "liquid_colour": "dark",
+      "meal_portion_eaten": null,
+      "pair_id": null,
+      "pair_role": null,
+      "source_id": "synth-ubag2000-1400",
+      "synthetic": true,
+      "note": "synthetic demo image, fictional patient"
+    },
+    {
+      "file": "demo-iv-02.jpg",
+      "category": "iv",
+      "container": "other",
+      "fluid": "other",
+      "expected_ml": 250,
+      "liquid_colour": null,
+      "meal_portion_eaten": null,
+      "pair_id": null,
+      "pair_role": null,
+      "source_id": "synth-ivbag-250",
+      "synthetic": true,
+      "note": "synthetic demo image, fictional patient"
+    },
+    {
+      "file": "demo-water-02.jpg",
+      "category": "water",
+      "container": "water_jug",
+      "fluid": "water",
+      "expected_ml": 300,
+      "liquid_colour": null,
+      "meal_portion_eaten": null,
+      "pair_id": null,
+      "pair_role": null,
+      "source_id": "synth-waterjug-300",
+      "synthetic": true,
+      "note": "synthetic demo image, fictional patient"
+    }
+  ]
+}

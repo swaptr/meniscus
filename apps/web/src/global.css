@@ -1,0 +1,64 @@
+/* Reset only. Theme values live in tokens.stylex.ts and are applied by the app shell.
+   Layered so StyleX (also layered, declared after) always wins. */
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  :root {
+    font-family:
+      system-ui,
+      -apple-system,
+      'Segoe UI',
+      Roboto,
+      sans-serif;
+    -webkit-text-size-adjust: 100%;
+    /* One light theme (DESIGN.md 2.1; dark mode is a non-goal), so dark-mode browsers do not invert controls. */
+    color-scheme: light;
+    /* The canvas token (tokens.stylex.ts): shows in any scrollbar gutter a dialog's scroll lock leaves. */
+    background-color: #eaf0f2;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  ol {
+    margin: 0;
+  }
+  ul,
+  ol {
+    padding: 0;
+    list-style: none;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+}
+
+/* Printing: the page content only (QR cards, the daily I&O sheet), never the app chrome. A4 portrait. */
+@page {
+  size: A4 portrait;
+  margin: 14mm 12mm;
+}
+@media print {
+  [data-no-print],
+  [data-app-chrome] {
+    display: none !important;
+  }
+  html,
+  body,
+  #main {
+    background: #fff !important;
+    padding: 0 !important;
+  }
+  /* Ink, not screen tints: keep the chart's fills when printed. */
+  body {
+    print-color-adjust: exact;
+  }
+}

@@ -1,0 +1,9 @@
+# Vite build output
+dist/
+dev-dist/
+
+# TanStack Router plugin cache
+.tanstack/
+
+# Vite local env overrides
+*.local

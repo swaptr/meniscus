@@ -1,0 +1,39 @@
+{
+  "name": "meniscus",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.5.1",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm --filter @meniscus/web build",
+    "dev:stack": "pnpm dlx supabase@3.0.0 start && pnpm dlx supabase@3.0.0 status",
+    "dev:stack:stop": "pnpm dlx supabase@3.0.0 stop",
+    "dev:s3": "pnpm dev:stack",
+    "dev:s3:stop": "pnpm dev:stack:stop",
+    "db:migrate": "pnpm --filter @meniscus/server db:migrate",
+    "start": "node apps/server/src/index.ts",
+    "typecheck": "tsc -p . && pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "lint": "eslint --max-warnings=0 .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check --cache --cache-strategy content .",
+    "verify": "pnpm format:check && pnpm lint && pnpm specs:validate && pnpm spec:check && pnpm typecheck && pnpm test",
+    "specs:validate": "openspec validate --all --strict --no-interactive",
+    "spec:check": "node scripts/spec-check.ts",
+    "spec": "node scripts/spec-check.ts --list"
+  },
+  "devDependencies": {
+    "@meniscus/config": "workspace:*",
+    "@fission-ai/openspec": "1.16.0",
+    "@types/node": "^24.19.2",
+    "@typescript/native": "npm:typescript@7.0.2",
+    "eslint": "10.14.0",
+    "prettier": "3.9.10",
+    "typescript": "npm:@typescript/typescript6@6.0.2"
+  },
+  "prettier": "@meniscus/config/prettier"
+}

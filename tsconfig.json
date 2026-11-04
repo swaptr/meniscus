@@ -1,0 +1,4 @@
+{
+  "extends": "@meniscus/config/tsconfig/node.json",
+  "include": ["scripts"]
+}

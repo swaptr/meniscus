@@ -1,0 +1,6 @@
+# Local store and media (patient data; DATA_DIR defaults here)
+data/
+uploads/
+
+# Script outputs (eval reports, synthetic images) written under the app
+out/

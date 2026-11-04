@@ -1,0 +1,10 @@
+pnpm-lock.yaml
+**/*.gen.ts
+**/dist/
+**/dev-dist/
+.claude/skills/
+openspec/
+.claude/commands/
+.claude/worktrees/
+# drizzle-kit output: committed as generated
+apps/server/drizzle/

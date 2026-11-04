@@ -1,0 +1,2 @@
+# Build output (packages ship TypeScript source; nothing here is committed)
+dist/

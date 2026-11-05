@@ -74,7 +74,7 @@ jobs:
       - id: node
         uses: actions/setup-node@v7
         with:
-          node-version: 24.18.0 # 24.22.2 crashed V8 freeing PGlite wasm in tests
+          node-version: 24.18.0
           # The pnpm store, keyed on the lockfile hash (saved by setup-node's post step).
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
@@ -141,7 +141,7 @@ jobs:
       - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v7
         with:
-          node-version: 24.18.0 # 24.22.2 crashed V8 freeing PGlite wasm in tests
+          node-version: 24.18.0
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile --prefer-offline
@@ -303,7 +303,7 @@ jobs:
       - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v7
         with:
-          node-version: 24.18.0 # 24.22.2 crashed V8 freeing PGlite wasm in tests
+          node-version: 24.18.0
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile --prefer-offline
@@ -341,7 +341,7 @@ jobs:
       - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v7
         with:
-          node-version: 24.18.0 # 24.22.2 crashed V8 freeing PGlite wasm in tests
+          node-version: 24.18.0
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile --prefer-offline

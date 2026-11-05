@@ -7,6 +7,11 @@
  * migrated directory is built once per suite (`globalSetup`, the `--test-global-setup` module) into a file keyed by the
  * migrations, and every `createTestDb()` loads that file: a fresh, isolated database in about a second. Run alone (no
  * global setup), the first call builds the file itself.
+ *
+ * The server tests run with `--no-wasm-code-gc` (apps/server package.json). V8's wasm code GC frees PGlite code that
+ * tier-up has replaced, and on CI runners (CPUs with memory protection keys) freeing it crashed V8 at random:
+ * "Check failed: jit_page_->allocations_.erase(addr) == 1" in ThreadIsolation::UnregisterWasmAllocation. Without code
+ * GC, wasm code is freed only when its module dies, and a test process lives one file.
  */
 import { createHash } from 'node:crypto'
 import { existsSync, readdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs'

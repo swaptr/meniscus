@@ -7,7 +7,7 @@
     "start": "tsx --env-file-if-exists=../../.env src/index.ts",
     "start:prod": "node src/index.ts",
     "typecheck": "tsc -p .",
-    "test": "TZ=Asia/Kolkata tsx --test --test-global-setup=./src/db/testing.ts 'src/**/*.test.ts'",
+    "test": "TZ=Asia/Kolkata tsx --no-memory-protection-keys --test --test-global-setup=./src/db/testing.ts 'src/**/*.test.ts'",
     "eval": "tsx --env-file-if-exists=../../.env scripts/eval.ts",
     "synth": "tsx --env-file-if-exists=../../.env scripts/synth-images.ts",
     "demo": "tsx --env-file-if-exists=../../.env scripts/demo-history.ts",

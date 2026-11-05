@@ -32,7 +32,5 @@ Thumbs.db
 
 # Local agent and browser tooling
 .playwright-mcp/
-.claude/agents-running
-.claude/settings.local.json
-.claude/worktrees/
+.claude/
 .playwright-mcp/

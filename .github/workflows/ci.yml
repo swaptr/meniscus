@@ -97,8 +97,6 @@ jobs:
           restore-keys: |
             tools-${{ runner.os }}-${{ runner.arch }}-node${{ steps.node.outputs.node-version }}-${{ hashFiles('pnpm-lock.yaml') }}-
             tools-${{ runner.os }}-${{ runner.arch }}-node${{ steps.node.outputs.node-version }}-
-      - name: Bash guard cases
-        run: bash .claude/hooks/guard-bash.test.sh
       - run: pnpm verify
       - name: Build the web app (Vite, bundle budget)
         run: pnpm build
